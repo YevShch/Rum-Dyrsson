@@ -1,0 +1,12 @@
+{
+  "name": "24-7",
+  "version": "1.0.0",
+  "description": "mäklar site (school project)",
+  "main": "buy.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
