@@ -1,9 +1,9 @@
 export default function buy() {
-  return `
+  return `<div id="köpText">
    <h1>Här kan du köpa bostad</h1>
-  
+  <div>
    
-  <section><h3>
+  <section id="infoBostad"><h3>
   Bostadstyp:<br>
   Adress:<br>
   Utgångspris:<br>
@@ -19,6 +19,7 @@ export default function buy() {
 -Utgångspris
 -Antal rum
 -Boarea
+
 Balkong / Uteplats
 Våning
 Hiss
@@ -27,3 +28,5 @@ Förråd
 Parkering
 Innergård
 */
+
+//skapa id till bostäderna 
