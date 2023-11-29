@@ -3,7 +3,7 @@ export default function buy() {
    <h1>Här kan du köpa bostad</h1>
   <div>
    
-  <section id="infoBostad"><h3>
+  <section class="infoBostad"><h3>
   Bostadstyp:<br>
   Adress:<br>
   Utgångspris:<br>

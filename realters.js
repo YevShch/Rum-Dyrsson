@@ -3,7 +3,7 @@ export default function realters() {
    <h1>Här kan du se våra mäklare</h1>
    
 
-   <section id="mäklare">
+   <section id="mäklareNamn">
    <h3>Joakim<br>
    Sara<br>
    Hayden<br>

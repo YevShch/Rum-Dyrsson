@@ -9,17 +9,32 @@
 #login {
   text-align: center;
   background-color:rgb(229, 212, 244);
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: purple;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right: 10px;
   padding-left: 10px;
-  
+  width: 50vh;
+  height: 50vh;
+  justify-content: center;
+  margin-left: 70vh;
+  margin-top: 15vh;
+  font-size:large;
+}
+
+#loginForm {
+  margin-top: 5vh;
 }
 
 #logInBtn {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: lightgrey;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(201, 240, 246);
+  color: purple;
+  height: 8vh;
+  width: 20vh;
+  margin-top: 15vh;
+  font-size: large;
 }
 
 @media screen and (max-width: 500px) {
@@ -38,17 +53,33 @@
 
 #säljFormulär {
   text-align: center;
-  background-color: rgb(164, 203, 218);
+  background-color: rgb(205, 238, 251);
   padding: 3px;
+  width: 80vh;
+  height: 120vh;
+  justify-content: center;
+  margin-left: 55vh;
+  margin-top: 15vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#formulärBtn {
+  width: 20vh;
+  height: 5vh;
+  margin-top: 3vh;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #köpText {
     text-align: center;
+    margin-top: 15vh;
+    color: rgb(44, 44, 108);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header>.main-nav {
   background-color: rgba(190, 223, 162, 0.848);
-  height: 3vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -56,15 +87,46 @@ header>.main-nav {
 }
 
 
-
 #mäklare {
   text-align: center;
+  margin-top: 15vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+}
+
+#mäklarNamn {
+  color: rgb(44, 44, 108);
 }
 
 h2 {
   text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
 }
 
-p {
-  text-align: center;
+
+nav {
+  width: 100vw;
+    position: fixed;
+    top: 0;
+    padding: 1vh 0;
+  display: flex;
+    justify-content: center;   
 }
+
+
+ nav > a {
+  color:rgb(28, 98, 228);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  font-size:larger; 
+}
+
+#default {
+  text-align: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:rgb(44, 44, 108);
+}
+
