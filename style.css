@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body>#sell {
+  /* background-color: rgb(206, 46, 46); */
+  background-image: url(https://unsplash.com/photos/modern-luxury-living-interior-3d-rendering-concept-qe0Tu9mVs7U);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+#sell {
+  width: 700px;
+  height: 700px;
+  background-color: rgb(180, 180, 170);
+  margin: 150px 350px 150px 350px;
+}
+
+#sell>h3 {
+  margin: 10px;
+  align-content: center;
+}
+
+#sell>section {
+  margin: 5px 10px 5px 20px;
+  font-size: 20px;
+}
+
+select,
+input {
+  justify-content: flex-end;
+}
+
+/* 
+label {
+  font-size: 20px;
+
+} */
+
+#login {
+  background-image: url();
+}
+
+/* body {
+  background-color: rgb(240, 232, 232);
+  font-family: Poiret One;
+} */
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  background-color: rgba(187, 140, 140, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+nav>a {
+  font-family: Spirax;
+  margin: 0 5vw;
+  font-size: 5vh;
+  color: white;
+  text-decoration: none;
+}
