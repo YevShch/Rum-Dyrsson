@@ -56,10 +56,11 @@
   background-color: rgb(205, 238, 251);
   padding: 3px;
   width: 80vh;
-  height: 120vh;
+  height: 130vh;
   justify-content: center;
   margin-left: 55vh;
   margin-top: 15vh;
+  margin-bottom: 5vh;
   color: rgb(44, 44, 108);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -67,8 +68,10 @@
 #formulärBtn {
   width: 20vh;
   height: 5vh;
-  margin-top: 3vh;
-  font-family: 'Times New Roman', Times, serif;
+  margin-top: 2vh;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color:rgb(44, 44, 108);
+  background-color: rgb(169, 217, 247);
 }
 
 #köpText {

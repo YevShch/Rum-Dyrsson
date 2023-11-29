@@ -107,7 +107,7 @@ export default function sell() {
 <small>Format: 123-456-7890</small>
 <br>
 <br>
-  <button id="formulärBtn">Skicka in formulär</button>
+  <button id="formulärBtn" type="submit">Skicka in formulär</button>
   <section>
   `)
 }
