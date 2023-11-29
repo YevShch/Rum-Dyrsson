@@ -39,18 +39,23 @@
 #säljFormulär {
   text-align: center;
   background-color: rgb(164, 203, 218);
-  padding: 10px;
+  padding: 3px;
 }
 
 #köpText {
     text-align: center;
 }
 
-nav {
-  background-color:rgb(198, 243, 198);
-  padding: 20px;
-  text-align: center; 
+header>.main-nav {
+  background-color: rgba(190, 223, 162, 0.848);
+  height: 3vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3vh;
 }
+
+
 
 #mäklare {
   text-align: center;
