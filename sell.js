@@ -1,34 +1,37 @@
 export default function sell () {
   return $( `
-   <section id="title">
-   <h1>Här kan du sälja din bostad med oss!</h1>
-   </section>
-  <section id="sell">
-   
-   <h3>Fyll i gärna ett formulär:</h3>
+  <section id="sellPage">
 
-<section>
-<label for="residence-select">Välj typ av bostad:</label>
+  <section id="image"> 
+   <section id="sellTitle">
+   <h1>Sälj din bostad med oss!</h1>
+   <h2>Vänligen fyll i formuläret:</h2>
+   </section>
+
+    <section id="sell"> 
+   
+    <section>
+<label for="residence-select">Typ av bostad:</label>
 <select name="residence" id="residence-select">
 <option value="">--Välj gärna en option--</option>
 <option value="lägenhet">Lägenhet</option>
 <option value="vila">Vila</option>
 <option value="tomt">Tomt</option>
 </select>
-<br>
 </section>
+<br>
 
 <section>
 <label for="adress">Adress:</label>
 <input type="text" id="adress" required/>
-<br>
 </section>
+<br>
 
 <section>
 <label for="ort">Ort:</label>
 <input type="text" id="ort" required/>
-<br>
 </section>
+<br>
 
 <section>
 <label for="post">Postnummer:</label>
@@ -125,7 +128,7 @@ export default function sell () {
 </section>
 
 <section>
-<label for="picture">Ladda ner en bild på din bostad:</label>
+<label for="picture">Ladda ner en bild:</label>
 <input type="file" id="pictures" name="picture" accept="image/png, image/jpeg" />
 <br>
 </section>
@@ -144,14 +147,15 @@ export default function sell () {
 
 <section>
 <label for="phone">Ditt telefonnummer:</label>
-<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-<small>Format: 123-456-7890</small>
+<input type="tel" id="phone" name="phone"  required />
 <br>
 </section>
 
 <section>
 <input type="button" id="saveHouse" value="Spara" />
 </section>
+  </section>
+  </section>
   </section>
   `);
 }

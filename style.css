@@ -1,53 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
 * {
   box-sizing: border-box;
 }
-
-body>#sell {
-  /* background-color: rgb(206, 46, 46); */
-  background-image: url(https://unsplash.com/photos/modern-luxury-living-interior-3d-rendering-concept-qe0Tu9mVs7U);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-
-}
-
-#sell {
-  width: 700px;
-  height: 700px;
-  background-color: rgb(180, 180, 170);
-  margin: 150px 350px 150px 350px;
-}
-
-#sell>h3 {
-  margin: 10px;
-  align-content: center;
-}
-
-#sell>section {
-  margin: 5px 10px 5px 20px;
-  font-size: 20px;
-}
-
-select,
-input {
-  justify-content: flex-end;
-}
-
-/* 
-label {
-  font-size: 20px;
-
-} */
-
-#login {
-  background-image: url();
-}
-
-/* body {
-  background-color: rgb(240, 232, 232);
-  font-family: Poiret One;
-} */
 
 nav {
   width: 100vw;
@@ -60,9 +15,60 @@ nav {
 }
 
 nav>a {
-  font-family: Spirax;
+  font-family: 'Hedvig Letters Serif', serif;
   margin: 0 5vw;
-  font-size: 5vh;
+  font-size: 3vh;
   color: white;
   text-decoration: none;
+}
+
+nav>image {
+  color: rgb(80, 19, 8);
+}
+
+body {
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+#sellTitle {
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(80, 19, 8);
+}
+
+#sellPage {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 149, 164);
+}
+
+#sellPage>#image {
+  width: 100vw;
+  background-image: url("./sell.webp");
+  background-repeat: no-repeat;
+}
+
+#sell {
+  width: 600px;
+  height: flex;
+  margin: 50px 450px 150px 450px;
+  padding: 5px 10px 5px 20px;
+  background-color: rgb(194, 176, 149);
+  color: rgb(80, 19, 8);
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+#sell>section {
+  padding-top: 5px;
+  font-size: 20px;
+  clear: both;
+  text-align: right;
+}
+
+#sell>section>label {
+  float: left;
 }
