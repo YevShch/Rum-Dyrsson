@@ -18,7 +18,7 @@ function router() {
       $('main').html(login())
       break
     default:
-      $('main').html(`<h1 id="default">Välkommen till mäklarsajten 24/7</h1><h2>Hemsidan där du kan hitta ditt drömhus!<h2>`)
+      $('main').html(`<h1 id="default">Välkommen till bostadsmäklarfirman Dhyr & Rumson</h1><h2>Hemsidan där du kan hitta ditt drömhus!<h2>`)
   }
 }
 
