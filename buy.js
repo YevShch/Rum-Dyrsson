@@ -10,6 +10,7 @@ export default function buy() {
   Antal rum:<br>
   Boarea:
   <h3><section>`
+ 
 }
 
 //Vy för att visa detaljinfo om en bostad - Informationen om en bostaden ska innehålla:

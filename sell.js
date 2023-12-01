@@ -8,8 +8,8 @@ export default function sell() {
 <select name="residence" id="residence-select">
   <option value="">--Välj gärna en option--</option>
   <option value="lägenhet">Lägenhet</option>
-  <option value="vila">Vila</option>
-  <option value="tomt">Tomt</option>
+  <option value="villa">Villa</option>
+  <option value="hus">Hus</option>
 </select>
 <br>
 <br>
@@ -30,7 +30,7 @@ export default function sell() {
 <input type="text" id="price" name="price" required/>
 <br>
 <br>
-<label for="rooms">Antal rums:</label>
+<label for="rooms">Antal rum:</label>
 <input id="rooms" type="number" name="rooms" value="0" />
 <br>
 <br>
