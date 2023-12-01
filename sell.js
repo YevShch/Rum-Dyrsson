@@ -11,8 +11,8 @@ export default function sell () {
     <section id="sell"> 
    
     <section>
-<label for="residence-select">Typ av bostad:</label>
-<select name="residence" id="residence-select">
+<label for="residence">Typ av bostad:</label>
+<select name="residence" id="residence">
 <option value="">--Välj gärna en option--</option>
 <option value="lägenhet">Lägenhet</option>
 <option value="vila">Vila</option>
@@ -22,14 +22,14 @@ export default function sell () {
 <br>
 
 <section>
-<label for="adress">Adress:</label>
-<input type="text" id="adress" required/>
+<label for="address">Adress:</label>
+<input type="text" id="address" required/>
 </section>
 <br>
 
 <section>
 <label for="ort">Ort:</label>
-<input type="text" id="ort" required/>
+<input type="text" id="city" required/>
 </section>
 <br>
 
@@ -59,7 +59,7 @@ export default function sell () {
 
 <section>
 <label for="balkong-select">Balkong:</label>
-<select name="balkong" id="balokong-select">
+<select name="balkong" id="balcony">
 <option value="">--Välj gärna en option--</option>
 <option value="0">har ingen balkong</option>
 <option value="1">jag har 1 balkong</option>
@@ -76,7 +76,7 @@ export default function sell () {
 
 <section>
 <label for="hiss-select">Hiss:</label>
-<select name="hiss" id="hiss-select">
+<select name="hiss" id="elevator">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
 <option value="ja">finns</option>
@@ -92,7 +92,7 @@ export default function sell () {
 
 <section>
 <label for="storehouse-select">Förråd:</label>
-<select name="storehouse" id="storehouse-select">
+<select name="storehouse" id="storehouse">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
 <option value="ja">finns</option>
@@ -102,7 +102,7 @@ export default function sell () {
 
 <section>
 <label for="parking-select">Parkering:</label>
-<select name="parking" id="parking-select">
+<select name="parking" id="parking">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
 <option value="ja1">parkeringplats i bostadsområde</option>
@@ -129,7 +129,7 @@ export default function sell () {
 
 <section>
 <label for="picture">Ladda ner en bild:</label>
-<input type="file" id="pictures" name="picture" accept="image/png, image/jpeg" />
+<input type="file" id="foto" name="picture" accept="image/png, image/jpeg" />
 <br>
 </section>
 
