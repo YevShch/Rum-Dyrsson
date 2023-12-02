@@ -2,20 +2,12 @@
   "name": "24-7",
   "version": "1.0.0",
   "description": "mäklar site (school project)",
-<<<<<<< HEAD
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-=======
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
->>>>>>> Yevheniias-branch
   "author": "",
   "license": "ISC",
   "dependencies": {
