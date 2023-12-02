@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  background-color: rgba(187, 140, 140, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+nav>a {
+  font-family: 'Hedvig Letters Serif', serif;
+  margin: 0 5vw;
+  font-size: 3vh;
+  color: white;
+  text-decoration: none;
+}
+
+nav>image {
+  color: rgb(80, 19, 8);
+}
+
+body {
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+#sellTitle {
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(80, 19, 8);
+}
+
+#sellPage {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 149, 164);
+}
+
+#sellPage>#image {
+  width: 100vw;
+  background-image: url("./sell.webp");
+  background-repeat: no-repeat;
+}
+
+#sell {
+  width: 600px;
+  height: flex;
+  margin: 50px 450px 150px 450px;
+  padding: 5px 10px 5px 20px;
+  background-color: rgb(194, 176, 149);
+  color: rgb(80, 19, 8);
+  font-family: 'Hedvig Letters Serif', serif;
+}
+
+#sell>section {
+  padding-top: 5px;
+  font-size: 20px;
+  clear: both;
+  text-align: right;
+}
+
+#sell>section>label {
+  float: left;
+}
