@@ -4,6 +4,7 @@
   "description": "mäklar site (school project)",
 <<<<<<< HEAD
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,8 @@
   },
 >>>>>>> Yevheniias-branch
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
 }
