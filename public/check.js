@@ -1,41 +1,34 @@
 import { getOne } from "./server-request.js"
 
 export default function notANumber(number) {
-  if (NaN(number)) {
+  if (isNaN(number)) {
     return true
   }
   return false
 }
 
-export default function stringEmpty(string) {
-  if (string.trim() === ' ') {
-    return true
-  }
-  return false
-}
-
-export default function validOption(option) {
+export default function invalidOption(option) {
   if (option === "") {
     return true
   }
   return false
 }
 
-export default function validPostNumber(postNumber) {
-  if (postNumber.trim().legth === 5) {
+export default function invalidPostNumber(postNumber) {
+  if (postNumber.trim().legth != 5) {
     return true
   }
   return false
 }
 
-export default function validYear(year) {
-  if (year.trim().legth === 4) {
+export default function invalidYear(year) {
+  if (year.trim().legth != 4) {
     return true
   }
   return false
 }
 
-export default function validEmail(email) {
+export default function invalidEmail(email) {
   if (email.includes("@")) {
     return true
   }
