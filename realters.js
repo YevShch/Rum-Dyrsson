@@ -1,14 +1,15 @@
 export default function realters() {
   return `<section id="mäklare">
-   <h1>Här kan du se våra mäklare</h1>
+   <h1>Här kan du se information om mäklaren</h1>
    
 
    <section id="mäklareNamn">
-   <h3>Joakim<br>
-   Sara<br>
-   Hayden<br>
-   Yevheniia
-   <h3>
+   Namn: Trevor Clarkson<br>
+   Telefon: 0123456789<br>
+   Email: TrevorDhyrOchRumson@gmail.com<br><br>
+   Öppettider (tel):<br>
+   Mån-fre 8 till 17<br>
+   Lörd-sön 10 till 15<br>
    <section>
   `
 }
