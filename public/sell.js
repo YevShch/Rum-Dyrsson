@@ -8,15 +8,20 @@ export default function sell () {
    <h2>Vänligen fyll i formuläret:</h2>
    </section>
 
-    <section id="sell"> 
+    <form id="sell" action="javascript:alert("A!")"> 
    
     <section>
 <label for="residence">Typ av bostad:</label>
 <select name="residence" id="residence">
 <option value="">--Välj gärna en option--</option>
 <option value="lägenhet">Lägenhet</option>
+<<<<<<< Updated upstream
 <option value="villa">Vila</option>
 <option value="radhus">Vila</option>
+=======
+<option value="villa">Villa</option>
+<option value="radhus">Radhus</option>
+>>>>>>> Stashed changes
 <option value="tomt">Tomt</option>
 </select>
 </section>
@@ -29,7 +34,7 @@ export default function sell () {
 <br>
 
 <section>
-<label for="ort">Ort:</label>
+<label for="city">Ort:</label>
 <input type="text" id="city" required/>
 </section>
 <br>
@@ -59,7 +64,7 @@ export default function sell () {
 </section>
 
 <section>
-<label for="balkong-select">Balkong:</label>
+<label for="balcony">Balkong:</label>
 <select name="balkong" id="balcony">
 <option value="">--Välj gärna en option--</option>
 <option value="0">finns ej</option>
@@ -76,7 +81,7 @@ export default function sell () {
 </section>
 
 <section>
-<label for="hiss-select">Hiss:</label>
+<label for="elevator">Hiss:</label>
 <select name="hiss" id="elevator">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
@@ -92,7 +97,7 @@ export default function sell () {
 </section>
 
 <section>
-<label for="storehouse-select">Förråd:</label>
+<label for="storehouse">Förråd:</label>
 <select name="storehouse" id="storehouse">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
@@ -102,7 +107,7 @@ export default function sell () {
 </section>
 
 <section>
-<label for="parking-select">Parkering:</label>
+<label for="parking">Parkering:</label>
 <select name="parking" id="parking">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
@@ -113,8 +118,8 @@ export default function sell () {
 </section>
 
 <section>
-<label for="garden-select">Innegård:</label>
-<select name="garden" id="garden-select">
+<label for="garden">Innegård:</label>
+<select name="garden" id="garden">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
 <option value="ja">finns</option>
@@ -129,7 +134,7 @@ export default function sell () {
 </section>
 
 <section>
-<label for="picture">Ladda ner en bild:</label>
+<label for="foto">Ladda ner en bild:</label>
 <input type="file" id="foto" name="picture" accept="image/png, image/jpeg" />
 <br>
 </section>
@@ -152,11 +157,18 @@ export default function sell () {
 <br>
 </section>
 
-<section>
-<input type="button" id="saveHouse" value="Spara" />
-</section>
-  </section>
+
+
+<input type="submit" id="saveHouse" value="Spara" />
+
+  </form>
   </section>
   </section>
   `);
 }
+
+$( "#sell" ).on( "submit", function ( event ) {
+  console.log( "Hej!" );
+  event.preventDefault();
+  alert( "Nu är vi inne!" )
+} )
