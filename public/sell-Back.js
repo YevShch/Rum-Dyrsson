@@ -36,6 +36,7 @@ $("#saveHouse").click(function () {
   if (notANumber(phone)) { errorMsg.push("Telefonnummer kan bara innehålla siffor") }
 
   if (errorMsg.length != 0) {
+    console.log(errorMsg)
     return errorMsg
   } else {
     const bostad = new NewBostad(type, address, city, post, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, description, sellerName, email, phone)
