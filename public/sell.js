@@ -15,7 +15,8 @@ export default function sell () {
 <select name="residence" id="residence">
 <option value="">--Välj gärna en option--</option>
 <option value="lägenhet">Lägenhet</option>
-<option value="vila">Vila</option>
+<option value="villa">Vila</option>
+<option value="radhus">Vila</option>
 <option value="tomt">Tomt</option>
 </select>
 </section>
@@ -61,9 +62,9 @@ export default function sell () {
 <label for="balkong-select">Balkong:</label>
 <select name="balkong" id="balcony">
 <option value="">--Välj gärna en option--</option>
-<option value="0">har ingen balkong</option>
-<option value="1">jag har 1 balkong</option>
-<option value="2">jag har 2 balkonger</option>
+<option value="0">finns ej</option>
+<option value="1">finns en balkong</option>
+<option value="2">finns två balkonger</option>
 </select>
 <br>
 </section>
@@ -105,8 +106,8 @@ export default function sell () {
 <select name="parking" id="parking">
 <option value="">--Välj gärna en option--</option>
 <option value="ej">finns ej</option>
-<option value="ja1">parkeringplats i bostadsområde</option>
-<option value="ja2">parkeringplats undertaket</option>
+<option value="ja1">parkeringplats utomhus</option>
+<option value="ja2">parkeringplats under taket</option>
 </select>
 <br>
 </section>
