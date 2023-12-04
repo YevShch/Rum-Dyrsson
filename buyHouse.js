@@ -160,6 +160,6 @@
     "Utgångspris": "1000 000 kr",
     "Antal rum": "3",
     "Boarea": "82 kvm"
-  },
+  }
   ]
 
