@@ -1,7 +1,7 @@
 import { validLogin } from "./check.js"
 
 
-$("#saveHouse").click(function () {
+$("").click(function () {
   const username = $('#username').val();
   const password = $('#password').val();
   if (validLogin(username, password)) {
