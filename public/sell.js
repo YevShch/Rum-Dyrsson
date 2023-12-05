@@ -1,3 +1,6 @@
+// import addBostad from "./sell-Back.js";
+
+
 export default function sell () {
   return $( `
   <section id="sellPage">
@@ -15,10 +18,7 @@ export default function sell () {
 <select name="residence" id="residence">
 <option value="">--Välj gärna en option--</option>
 <option value="lägenhet">Lägenhet</option>
-<<<<<<< Updated upstream
-<option value="villa">Vila</option>
-<option value="radhus">Vila</option>
-=======
+
 <option value="villa">Villa</option>
 <option value="radhus">Radhus</option>
 >>>>>>> Stashed changes
@@ -167,8 +167,15 @@ export default function sell () {
   `);
 }
 
-$( "#sell" ).on( "submit", function ( event ) {
-  console.log( "Hej!" );
-  event.preventDefault();
-  alert( "Nu är vi inne!" )
-} )
+export function addSellsEventlistner () {
+  $( "#sell" ).on( "submit", function ( event ) {
+    event.preventDefault();
+    console.log( "Hej!" );
+    alert( "Nu är vi inne!" ) 
+  })
+} 
+
+    
+
+
+

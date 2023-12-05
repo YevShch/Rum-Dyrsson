@@ -1,12 +1,15 @@
-import sell from "./sell.js"
+import sell, { addSellsEventlistner } from "./sell.js"
 import buy from "./buy.js"
 import realters from "./realters.js"
 import login from "./login.js"
+
+
 
 function router () {
   switch ( location.hash ) {
     case "#sell":
       $( 'main' ).html( sell() )
+      addSellsEventlistner()
       break
     case "#buy":
       $( 'main' ).html( buy() )

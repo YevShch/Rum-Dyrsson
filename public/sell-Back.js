@@ -1,10 +1,10 @@
 import { addOne } from "./server-request.js"
 import NewBostad from "./newBostad.js";
 import { invalidOption, notANumber, invalidPostNumber, invalidYear, invalidEmail } from "./check.js"
-import { log } from "console";
 let errorMsg = []
 
-$( "#saveHouse" ).on( 'click', function () {
+
+$( "#saveHouse" ).click( function () {
   console.log( "Vi kommit in!" );
   errorMsg = []
   const type = $( '#type' ).val();
@@ -44,5 +44,7 @@ $( "#saveHouse" ).on( 'click', function () {
     const bostad = new NewBostad( type, address, city, post, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, description, sellerName, email, phone )
     addOne( "sell", bostad.dataInfo() );
     alert( "sell förfrågningen skapad!" );
+    // }
   }
 } );
+

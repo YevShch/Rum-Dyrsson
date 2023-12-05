@@ -19,14 +19,15 @@ nav>a {
   margin: 0 5vw;
   font-size: 3vh;
   color: white;
+  /* color: rgb(141, 93, 84); */
   text-decoration: none;
 }
 
-
-
-nav>image {
-  color: rgb(80, 19, 8);
+#logo {
+  width: 165px;
+  height: 24px;
 }
+
 
 body {
   font-family: 'Hedvig Letters Serif', serif;
@@ -46,6 +47,23 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(194, 149, 164);
+}
+
+#homePage {
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 149, 164);
+}
+
+#homeTitle {
+  margin-top: 700px;
+  margin-bottom: 700px;
+  color: wheat;
 }
 
 #sellPage>#image {
@@ -73,4 +91,10 @@ body {
 
 #sell>section>label {
   float: left;
+}
+
+#hem {
+  background-image: url("./home1.webp");
+  width: 100vw;
+  background-repeat: no-repeat;
 }
