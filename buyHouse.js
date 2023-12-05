@@ -1,6 +1,6 @@
 
 
-  const köpBostäder = [
+  /*const köpBostäder = [
   {
     "id": 1,
     "Bostads typ":"Hus",
@@ -162,4 +162,4 @@
     "Boarea": "82 kvm"
   }
   ]
-
+*/
