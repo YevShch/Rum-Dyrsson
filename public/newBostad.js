@@ -33,7 +33,6 @@ export default class NewBostad {
     }
   }
 
-
   dataInfo() {
     return {
       "id": 'id' + new Date().getTime(),
@@ -52,7 +51,7 @@ export default class NewBostad {
       "parking": this.parking,
       "garden": this.garden,
       "description": this.description,
-      "foto": this.getPhoto(this.type),
+      "photo": this.getPhoto(this.type),
       "sellerName": this.sellerName,
       "email": this.email,
       "phone": this.phone
