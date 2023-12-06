@@ -4,7 +4,8 @@ import { invalidOption, notANumber, invalidPostNumber, invalidYear, invalidEmail
 let errorMsg = []
 
 
-$( "#saveHouse" ).click( function () {
+// $( "#saveHouse" ).click( function () {
+export default function addBostad() {
   console.log( "Vi kommit in!" );
   errorMsg = []
   const type = $( '#type' ).val();
@@ -46,5 +47,6 @@ $( "#saveHouse" ).click( function () {
     alert( "sell förfrågningen skapad!" );
     // }
   }
-} );
+
+};
 
