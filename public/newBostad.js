@@ -1,5 +1,5 @@
 export default class NewBostad {
-  constructor ( type, address, city, post, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, description, sellerName, email, phone ) {
+  constructor ( type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, sellerName, email, phone ) {
     this.type = type;
     this.address = address;
     this.city = city;

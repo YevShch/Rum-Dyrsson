@@ -1,5 +1,6 @@
 export default function login () {
   return $( `
+  <section id="login">
    <h1>Här kan du logas in på din konto</h1>
   <section id="login">
     <form id="loginForm">
@@ -13,8 +14,7 @@ export default function login () {
       <input type="submit" value="Logga in">
     </form>
   </section>
-   <h1>Här kan du logas in på din konto</h1>
-  `
-  )
+  </section>
+  `)
 }
 
