@@ -1,5 +1,5 @@
-export default function login () {
-  return $( `
+export default function login() {
+  return $(`
    <h1>Här kan du logas in på din konto</h1>
   <section id="login">
     <form id="loginForm">

@@ -2,7 +2,7 @@
   "name": "24-7",
   "version": "1.0.0",
   "description": "mäklar site (school project)",
-  "main": "index.js",
+  "main": "buy.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

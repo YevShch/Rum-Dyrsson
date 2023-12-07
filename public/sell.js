@@ -1,5 +1,5 @@
-export default function sell () {
-  return $( `
+export default function sell() {
+  return $(`
   <section id="sellPage">
 
   <section id="image"> 

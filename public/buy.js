@@ -1,5 +1,9 @@
-//import * as serRequest from './server-request.js';
+export default function buy() {
 
+}
+
+//import * as serRequest from './server-request.js';
+/*
 let isBuyFunctionExecuted = false;
 
 export default function buy() {
@@ -240,3 +244,4 @@ getFilteredHouses(testFilters).then(houses => {
 $(document).ready(function () {
   buy();
 });
+*/
