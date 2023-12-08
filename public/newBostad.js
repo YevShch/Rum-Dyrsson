@@ -36,6 +36,7 @@ export default class NewBostad {
   dataInfo () {
     return {
       "id": 'id' + new Date().getTime(),
+      "photo": this.getPhoto(this.type),  
       "type": this.type,
       "address": this.address,
       "city": this.city,

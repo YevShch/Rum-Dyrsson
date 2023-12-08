@@ -1,8 +1,5 @@
-// import addBostad from "./sell-Back.js";
-import { addOne } from "./server-request.js"
+import { addOne } from "./server-request.js";
 import NewBostad from "./newBostad.js";
-// import { invalidOption, notANumber, invalidPostNumber, invalidYear, invalidEmail } from "./check.js"
-// let errorMsg = []
 
 export default function sell () {
   return $( `
@@ -42,19 +39,19 @@ export default function sell () {
 
 <section>
 <label for="price">Utgångspis:</label>
-<input type="text" id="price" name="price" title="Pris ska vara sifror"/>
+<input type="number" id="price" name="price" min="50000" max="999000000" value="50000" step="10000" title="Pris ska vara sifror"/>
 </section>
 <br>
 
 <section>
 <label for="rooms">Antal rums:</label>
-<input id="rooms" type="number" name="rooms" value="1" required/>
+<input id="rooms" type="number" name="rooms" min="1" max="20" value="1" required/>
 </section>
 <br>
 
 <section>
 <label for="area">Boarea, kvm:</label>
-<input id="area" type="number" name="area" value="20" step = "5" required/>
+<input id="area" type="number" name="area"  min="20" max="500" value="20" step = "5" required/>
 </section>
 <br>
 
@@ -71,7 +68,7 @@ export default function sell () {
 
 <section>
 <label for="floor">Våning(för lägenheter):</label>
-<input id="floor" type="number" name="våning" value="1" required/>
+<input id="floor" type="number" name="våning" min="1" max="30" value="1" required/>
 </section>
 <br>
 
@@ -146,134 +143,49 @@ export default function sell () {
 </section>
 <br>
 
-<input type="button" id="saveHouse" value="Spara" />
-
+<button type="submit">Spara</button>
   </form>
+    </section>
 
-  <script>
-
-
-  $.when(
-    $.getScript("public/sell-Back.js"),
-  ).done(function()){
-
-$( 'input' ).on( 'change', function () {
-  addBostad();
-  console.log( bostad );
-} );
-
-
- 
-
-  </script>
-
-  </section>
   </section>
   `);
 }
 
+export function addSellsEventlistner () {
+  $( "#sell" ).on( "submit", function ( event ) {
+    event.preventDefault()
+    console.log( "Knappen fungerar!" )
+    alert( "Nu är vi inne!" );
+    let type = $( '#type' ).val();
+    let address = $( '#address' ).val();
+    let city = $( '#city' ).val();
+    let price = $( '#price' ).val();
+    let rooms = $( '#rooms' ).val();
+    let area = $( '#area' ).val();
+    let balcony = $( '#balcony' ).val();
+    let floor = $( '#floor' ).val();
+    let elevator = $( '#elevator' ).val();
+    let year = $( '#year' ).val();
+    let storehouse = $( '#storehouse' ).val();
+    let parking = $( '#parking' ).val();
+    let garden = $( '#garden' ).val();
+    let name = $( '#name' ).val();
+    let lastName = $( '#lastName' ).val();
+    let email = $( '#email' ).val();
+    let phone = $( '#phone' ).val();
 
-// function saveBostad () {
-//   let type = $( '#type' ).val();
-//   let address = $( '#address' ).val();
-//   let city = $( '#city' ).val();
-//   let price = $( '#price' ).val();
-//   let rooms = $( '#rooms' ).val();
-//   let area = $( '#area' ).val();
-//   let balcony = $( '#balcony' ).val();
-//   let floor = $( '#floor' ).val();
-//   let elevator = $( '#elevator' ).val();
-//   let year = $( '#year' ).val();
-//   let storehouse = $( '#storehouse' ).val();
-//   let parking = $( '#parking' ).val();
-//   let garden = $( '#garden' ).val();
-//   let name = $( '#name' ).val();
-//   let lastName = $( '#lastName' ).val();
-//   let email = $( '#email' ).val();
-//   let phone = $( '#phone' ).val();
+   
+    console.log( "new bostad are created!" );
 
-//   if ( type && address && city && price && rooms && area && balcony && floor && elevator && year && storehouse && parking && garden && name && lastName && email && phone ) {
-//     let bostad = {
-//       type: type,
-//       address: address,
-//       city: city,
-//       price: price,
-//       rooms: rooms,
-//       area: area,
-//       balcony: balcony,
-//       floor: floor,
-//       elevator: elevator,
-//       year: year,
-//       storehouse: storehouse,
-//       parking: parking,
-//       garden: garden,
-//       name: name,
-//       lastname: lastName,
-//       email: email,
-//       phone: phone
-//     };
-//     console.log( bostad );
-//   }
-// }
+    let bostad = new NewBostad( type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, name, lastName, email, phone )
+    console.log( bostad );
+    addOne( "sell", bostad.dataInfo() );
 
-
-
-
-// $( document ).ready( function () {
-//   $( "#saveBostad" ).click( function () {
-//     if ( $( "form" )[ 0 ].checkValidity() ) {
-//       let bostad = {
-//         type: $( '#type' ).val(),
-//         address: $( '#address' ).val(),
-//         city: $( '#city' ).val(),
-//         price: $( '#price' ).val(),
-//         rooms: $( '#rooms' ).val(),
-//         area: $( '#area' ).val(),
-//         balcony: $( '#balcony' ).val(),
-//         floor: $( '#floor' ).val(),
-//         elevator: $( '#elevator' ).val(),
-//         year: $( '#year' ).val(),
-//         storehouse: $( '#storehouse' ).val(),
-//         parking: $( '#parking' ).val(),
-//         garden: $( '#garden' ).val(),
-//         name: $( '#name' ).val(),
-//         lastName: $( '#lastName' ).val(),
-//         email: $( '#email' ).val(),
-//         phone: $( '#phone' ).val()
-//       };
-//       console.log( bostad );
-//       console.log( "new bostad are created!" );
-//       // const bostad = new NewBostad( type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, sellerName, email, phone )
-//       // addOne( "sell", bostad.dataInfo() );
-//       alert( "sell förfrågningen skapad!" );
-//       $( "form" )[ 0 ].reset()
-//     } else {
-//       alert( "Vänligen fyll i alla fälten korrekt" );
-//     }
-//   } );
-// } );
-
-
-
-
-
-
-
-// export function addSellsEventlistner () {
-//   $( "#sell" ).on( "submit", function ( event) {
-//     event.preventDefault()
-//     console.log( "Hej!" );
-//     alert( "Nu är vi inne!" ) 
-//   })
-// } 
-
-
-// $( 'input' ).on( 'change', function () {
-//   saveBostadData();
-//   console.log( bostad );
-// } );
-
-    
-
-
+    alert( "sell förfrågningen skapad!" );
+    alert( "sell förfrågningen skapad!" );
+    $( "form" )[ 0 ].reset()
+    console.log( "Säljförfrågningen har sparats!" );
+  }
+  );
+}
 
