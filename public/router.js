@@ -1,5 +1,5 @@
-import sell from "./sell1.js"
-import {addSellsEventlistner} from "./sell.js"
+import sell from "./sell4.js"
+// import {addSellsEventlistner} from "./sell.js"
 import buy from "./buy.js"
 import realters from "./realters.js"
 import login from "./login.js"

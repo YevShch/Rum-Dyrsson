@@ -211,6 +211,62 @@ export default function sell () {
 }
 
 
+// function saveBostad () {
+//   if ( $( "form" )[ 0 ].checkValidity() ) {
+//     let bostad = {
+//       type: $( '#type' ).val(),
+//       address: $( '#address' ).val(),
+//       city: $( '#city' ).val(),
+//       price: $( '#price' ).val(),
+//       rooms: $( '#rooms' ).val(),
+//       area: $( '#area' ).val(),
+//       balcony: $( '#balcony' ).val(),
+//       floor: $( '#floor' ).val(),
+//       elevator: $( '#elevator' ).val(),
+//       year: $( '#year' ).val(),
+//       storehouse: $( '#storehouse' ).val(),
+//       parking: $( '#parking' ).val(),
+//       garden: $( '#garden' ).val(),
+//       name: $( '#name' ).val(),
+//       email: $( '#email' ).val(),
+//       phone: $( '#phone' ).val()
+//     };
+//     console.log( bostad );
+//     // $.ajax({
+//     //   url:"http://localhost:3000/sell",
+//     //   type:"POST",
+//     //   data: JSON.stringify(bostad),
+//     //   contentType:"application/json;
+//     //   charset=utf-8",
+//     //   dataType: "json",
+//     //   succes: function(){
+//     //     alert("Bostadsdata har sparats!");
+//     //      $( '#type' ).val(""),
+//     //      $( '#address' ).val(""),
+//     //      $( '#city' ).val(""),
+//     //      $( '#price' ).val(""),
+//     //      $( '#rooms' ).val(""),
+//     //      $( '#area' ).val(""),
+//     //      $( '#balcony' ).val(""),
+//     //      $( '#floor' ).val(""),
+//     //      $( '#elevator' ).val(""),
+//     //      $( '#year' ).val(""),
+//     //      $( '#storehouse' ).val(""),
+//     //      $( '#parking' ).val(""),
+//     //      $( '#garden' ).val(""),
+//     //      $( '#name' ).val(""),
+//     //      $( '#lastName' ).val(""),
+//     //      $( '#email' ).val(""),
+//     //      $( '#phone' ).val("")
+//     //   }
+//     // })
+//     alert( "sell förfrågningen skapad!" );
+//     $( "form" )[ 0 ].reset()
+//   }
+// }
+
+
+
 
 // function saveBostad () {
 //   if ( $( "form" )[ 0 ].checkValidity() ) {
