@@ -6,7 +6,16 @@
       "password": 123
     }
   ],
-  "buy": [],
+  "buy": [
+    {
+      "id": 1,
+      "text": "asd"
+    },
+    {
+      "id": 2,
+      "text": "asd"
+    }
+  ],
   "sell": [],
   "intrest": []
 }

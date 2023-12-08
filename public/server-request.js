@@ -1,11 +1,12 @@
 export async function getAll(section) {
-  const res = await fetch(`/${section}`)
+  const res = await fetch(`http://localhost:3000/${section}`)
+  //const res = await fetch(`/${section}`)
   const data = await res.json()
   return data
 }
 
 export async function addOne(section, newData) {
-  let response = await fetch(`/${section}`, {
+  let response = await fetch(`http://localhost:3000/${section}`, {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newData)
@@ -16,13 +17,13 @@ export async function addOne(section, newData) {
 }
 
 export async function getOne(section, id) {
-  const res = await fetch(`/${section}` + id)
+  const res = await fetch(`http://localhost:3000/${section}` + id)
   const data = await res.json()
   return data;
 }
 
 export async function update(section, updateData) {
-  let response = await fetch(`/${section}` + updateData.id, {
+  let response = await fetch(`http://localhost:3000/${section}` + updateData.id, {
     method: 'put',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(updateData)
@@ -33,7 +34,7 @@ export async function update(section, updateData) {
 }
 
 export async function deleteOne(section, id) {
-  let response = await fetch(`/${section}` + id, {
+  let response = await fetch(`http://localhost:3000/${section}` + id, {
     method: 'delete'
   })
 

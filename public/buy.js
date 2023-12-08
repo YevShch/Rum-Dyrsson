@@ -1,5 +1,8 @@
-export default function buy() {
+import { getAll } from "./server-request.js"
 
+export default function buy() {
+  let data = getAll("buy")
+  console.log(data)
 }
 
 //import * as serRequest from './server-request.js';
