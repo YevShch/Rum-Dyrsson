@@ -1,20 +1,44 @@
+import { getOne } from "./server-request.js"
+
 export default function login() {
   return $(`
-   <h1>Här kan du logas in på din konto</h1>
-  <section id="login">
-    <form id="loginForm">
+    <section id="loginHead">
+      <h1>Här kan du logas in på din konto</h1>
+    </section>
 
-      <label for="username">Användarnamn</label>
-      <input type="text" id="username" required>
+      <section id="login">
+        <form id="loginForm">
 
-      <label for="password">Lösenord</label>
-      <input type="password" id="password" required>
+          <label for="username">Användarnamn</label>
+          <input type="text" id="username" required>
 
-      <input type="submit" value="Logga in">
-    </form>
-  </section>
-   <h1>Här kan du logas in på din konto</h1>
-  `
-  )
+            <label for="password">Lösenord</label>
+            <input type="password" id="password" required>
+
+              <button type="submit" value="Logga in">Log in</button>
+              </form>
+          </section>
+          `)
 }
 
+export function addLoginsEventlistner() {
+  $("#loginForm").on("submit", function (event) {
+    event.preventDefault()
+    const username = $('#username').val();
+    const password = $('#password').val();
+    someFunction(username, password)
+  }
+  );
+}
+
+async function someFunction(username, password) {
+  const user = await getOne("admin", 1);
+  console.log(user)
+  if (user.username == username && user.password == password) {
+    console.log("Rät inlogningen!")
+    window.location.href = "#admin";
+  } else {
+    alert("det är fel på användarnamnet eller lösenordet")
+    return
+  }
+}

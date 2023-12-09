@@ -11,7 +11,6 @@ export default function sell() {
    <h2>Vänligen fyll i formuläret:</h2>
    </section>
 
-    // <form id="sell"> 
    <form id="sell">
     <section>
 <label for="type">Typ av bostad:</label>
@@ -120,7 +119,7 @@ export default function sell() {
 <br>
 
 <section>
-<label for="name">Namn: </label>
+<label for="name">Förnamn: </label>
 <input type="text" name="name" id="name" pattern="[A-Za-z]+" required />
 </section>
 <br>
@@ -174,7 +173,7 @@ export function addSellsEventlistner() {
     let email = $('#email').val();
     let phone = $('#phone').val();
 
-    let bostad = new NewBostad(type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstNamename, lastName, email, phone)
+    let bostad = new NewBostad(type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone)
     console.log(bostad);
     addOne("sell", bostad.dataInfo());
 

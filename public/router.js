@@ -3,6 +3,11 @@ import { addSellsEventlistner } from "./sell.js"
 import buy from "./buy.js"
 import realters from "./realters.js"
 import login from "./login.js"
+import { addLoginsEventlistner } from "./login.js"
+import admin from "./admin.js"
+import buyList from "./buyList.js"
+import { openBuyList } from "./admin.js"
+
 
 function router() {
   switch (location.hash) {
@@ -18,6 +23,23 @@ function router() {
       break
     case "#login":
       $('main').html(login())
+      addLoginsEventlistner()
+      break
+    case "#admin":
+      $('main').html(admin())
+      openBuyList();
+      addSellMessadgeEventListner();
+      addIntresseEventListner();
+      addLoggUtEventListner();
+      break
+    case "#buyList":
+      $('main').html(buyList())
+      break
+    case "#sellMessage":
+      $('main').html(sellMessage())
+      break
+    case "#intrestsList":
+      $('main').html(intrestsList())
       break
     default:
       $('main').html(`<h1 id="default">Välkommen till bostadsmäklarfirman Dhyr & Rumson</h1><h2>Hemsidan där du kan hitta ditt drömhus!<br><h2>

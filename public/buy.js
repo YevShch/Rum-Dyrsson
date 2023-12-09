@@ -1,8 +1,28 @@
 import { getAll } from "./server-request.js"
 
 export default function buy() {
-  let data = getAll("buy")
+  let data = someFunction("buy")
+  let husContainer = $('<div id="köpText"><h1>Här kan du köpa bostad</h1><div class="hus-container"></div></div>');
+
+  // Loopa igenom husdata och skapa element för varje hus
+  data.forEach(function (hus) {
+    let imagePath = hus.image || 'home page house.jpg'; // enkel bild bara för att ha en yta att klicka på ändra denna
+
+    // Skapa husinformationselement
+    let husInfo = $(`<div class="hus-info" data-id="${hus.id}" style="position: relative;">
+                              <img src="${imagePath}" alt="Bild av ${hus.type}" class="hus-bild" style="width:200px;height:200px;cursor:pointer;">
+                              <div class="buttons-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; z-index: 1;">
+                                <button class="btn btn-warning redigera-btn">Redigera</button>
+                                <button class="btn btn-danger radera-btn">Radera</button>
+                              </div>
+                           </div>`);
+  })
+}
+
+async function someFunction() {
+  const data = await getAll("buy");
   console.log(data)
+  return data
 }
 
 //import * as serRequest from './server-request.js';

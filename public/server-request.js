@@ -1,6 +1,5 @@
 export async function getAll(section) {
   const res = await fetch(`http://localhost:3000/${section}`)
-  //const res = await fetch(`/${section}`)
   const data = await res.json()
   return data
 }
@@ -17,9 +16,9 @@ export async function addOne(section, newData) {
 }
 
 export async function getOne(section, id) {
-  const res = await fetch(`http://localhost:3000/${section}` + id)
+  const res = await fetch(`http://localhost:3000/${section}/${id}`)
   const data = await res.json()
-  return data;
+  return data
 }
 
 export async function update(section, updateData) {
