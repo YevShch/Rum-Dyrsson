@@ -1,9 +1,8 @@
 export default class NewBostad {
-  constructor(type, address, city, post, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, description, sellerName, email, phone) {
+  constructor(type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone) {
     this.type = type;
     this.address = address;
     this.city = city;
-    this.post = post;
     this.price = price;
     this.rooms = rooms;
     this.area = area;
@@ -14,8 +13,8 @@ export default class NewBostad {
     this.storehouse = storehouse;
     this.parking = parking;
     this.garden = garden;
-    this.description = description;
-    this.sellerName = sellerName;
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.email = email;
     this.phone = phone;
   }
@@ -36,10 +35,10 @@ export default class NewBostad {
   dataInfo() {
     return {
       "id": 'id' + new Date().getTime(),
+      "photo": this.getPhoto(this.type),
       "type": this.type,
       "address": this.address,
       "city": this.city,
-      "post": this.post,
       "price": this.price,
       "rooms": this.rooms,
       "area": this.area,
@@ -50,9 +49,8 @@ export default class NewBostad {
       "storehouse": this.storehouse,
       "parking": this.parking,
       "garden": this.garden,
-      "description": this.description,
-      "photo": this.getPhoto(this.type),
-      "sellerName": this.sellerName,
+      "firstName": this.firstName,
+      "lastName": this.lastName,
       "email": this.email,
       "phone": this.phone
     }
