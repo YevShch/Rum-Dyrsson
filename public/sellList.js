@@ -5,3 +5,22 @@ export default function sellList() {
   <div>  
   `
 }
+
+//getAll
+async function getAllBuyData() {
+  const data = await getAll("sell");
+  console.log(data)
+  return data
+}
+
+//getOne
+$("").click(function () {
+  const data = getOne("sell", sellID)
+  addOne("buy", data)
+  deleteOne("sell", sellID)
+})
+
+//delete
+$("").click(function () {
+  deleteOne("sell", sellID)
+})

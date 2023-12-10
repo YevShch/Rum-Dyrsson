@@ -5,7 +5,10 @@ export default function openBuyList() {
   return `
    <div id="buyList">
    <h1>buyList</h1>
-  <div>  
+  <div>
+  <br>
+  
+
   `
 }
 
@@ -15,14 +18,8 @@ async function getAllBuyData() {
   console.log(data)
   return data
 }
-//move
-$("").click(function () {
-  const data = getOne("sell", sellID)
-  addOne("buy", data)
-  deleteOne("sell", sellID)
-})
 
 //delete
 $("").click(function () {
-  deleteOne("sell", sellID)
+  deleteOne("buy", buyID)
 })

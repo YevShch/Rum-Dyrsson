@@ -6,7 +6,14 @@ export default function intrestsList() {
   `
 }
 
+//getAll
+async function getAllBuyData() {
+  const data = await getAll("intrest");
+  console.log(data)
+  return data
+}
+
 //delete
 $("").click(function () {
-  deleteOne("sell", interestID)
+  deleteOne("intrest", interestID)
 })
