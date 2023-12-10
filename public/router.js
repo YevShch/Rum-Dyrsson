@@ -1,13 +1,11 @@
-import sell from "./sell.js"
-import { addSellsEventlistner } from "./sell.js"
+import sell, { addSellsEventlistner } from "./sell.js"
 import buy from "./buy.js"
 import realters from "./realters.js"
-import login from "./login.js"
-import { addLoginsEventlistner } from "./login.js"
+import login, { addLoginsEventlistner } from "./login.js"
 import admin from "./admin.js"
 import buyList from "./buyList.js"
-import { openBuyList } from "./admin.js"
-
+import sellList from "./sellList.js"
+import intrestsList from "./intrestList.js"
 
 function router() {
   switch (location.hash) {
@@ -27,16 +25,12 @@ function router() {
       break
     case "#admin":
       $('main').html(admin())
-      openBuyList();
-      addSellMessadgeEventListner();
-      addIntresseEventListner();
-      addLoggUtEventListner();
       break
     case "#buyList":
       $('main').html(buyList())
       break
-    case "#sellMessage":
-      $('main').html(sellMessage())
+    case "#sellList":
+      $('main').html(sellList())
       break
     case "#intrestsList":
       $('main').html(intrestsList())

@@ -1,7 +1,7 @@
 import { getAll } from "./server-request.js"
 
 export default function buy() {
-  let data = someFunction("buy")
+  let data = getAllBuyData()
   let husContainer = $('<div id="köpText"><h1>Här kan du köpa bostad</h1><div class="hus-container"></div></div>');
 
   // Loopa igenom husdata och skapa element för varje hus
@@ -19,7 +19,7 @@ export default function buy() {
   })
 }
 
-async function someFunction() {
+async function getAllBuyData() {
   const data = await getAll("buy");
   console.log(data)
   return data

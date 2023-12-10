@@ -1,6 +1,7 @@
-import { getOne, addOne, deleteOne } from "./server-request.js"
+import { getAll, getOne, addOne, deleteOne } from "./server-request.js"
 
-export default function buyList() {
+export default function openBuyList() {
+  const data = getAllBuyData()
   return `
    <div id="buyList">
    <h1>buyList</h1>
@@ -8,6 +9,12 @@ export default function buyList() {
   `
 }
 
+//getAll
+async function getAllBuyData() {
+  const data = await getAll("buy");
+  console.log(data)
+  return data
+}
 //move
 $("").click(function () {
   const data = getOne("sell", sellID)

@@ -39,6 +39,5 @@ async function someFunction(username, password) {
     window.location.href = "#admin";
   } else {
     alert("det är fel på användarnamnet eller lösenordet")
-    return
   }
 }
