@@ -4,9 +4,9 @@ export default function admin () {
    <h1>Admin sida</h1>
   <div>
   
-  <section id="#buyList">
+  <form id="#buyList">
 <button onclick="openBuyList()">Buy lista</button>
-</section>
+</form>
 <br>
 
 <section id="#sellMessage">
@@ -19,45 +19,32 @@ export default function admin () {
 </section>
 <br>
 
-
-
-<section id="loggOut">
-<button id="loggOut">Logga ut</button>
+<section id="logOut">
+<button onclick="logOut">Logga ut</button>
 </section>
 <br>
 
+<script>
+function openBuyList () {
+  window.location.href = "#buyList";
+};
+
+function openSellMessage () {
+  window.location.href = "#sellMessage";
+};
+
+function openIntrestsList () {
+  window.location.href = "#intrestsList";
+};
+
+function logOut () {
+  window.location.href = "#login";
+};
+
+</script>
   `
 }
 
 
-export function openBuyList () {
-  $( "#buyList" ).on( "submit", function ( event ) {
-    event.preventDefault()
-    window.location.href = "#sellMessage";
-  }
-  );
-}
- 
-export function openSellMessage () {
-  $( "#sellMessage" ).on( "submit", function ( event ) {
-    event.preventDefault()
-    window.location.href = "#sellMessage";
-  }
-  );
-}
 
-export function openIntrestsList () {
-  $( "#intrestsList" ).on( "submit", function ( event ) {
-    event.preventDefault()
-    window.location.href = "#intrestsList";
-  }
-  );
-}
 
-export function LoggOut () {
-  $( "#logOut" ).on( "submit", function ( event ) {
-    event.preventDefault()
-    window.location.href = "#loggOut";
-  }
-  );
-}

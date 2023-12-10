@@ -11,7 +11,6 @@ export default function sell () {
    <h2>Vänligen fyll i formuläret:</h2>
    </section>
 
-    // <form id="sell"> 
    <form id="sell">
     <section>
 <label for="type">Typ av bostad:</label>

@@ -27,10 +27,6 @@ function router () {
       break
     case "#admin":
       $( 'main' ).html( admin() )
-      addBuyListEventlistner();
-      addSellMessadgeEventListner();
-      addIntresseEventListner();
-      addLoggUtEventListner();
       break
     case "#buyList":
       $( 'main' ).html( buyList() )
