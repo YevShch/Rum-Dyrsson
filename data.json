@@ -1,0 +1,21 @@
+{
+  "admin": [
+    {
+      "id": 1,
+      "username": "abc",
+      "password": 123
+    }
+  ],
+  "buy": [
+    {
+      "id": 1,
+      "text": "asd"
+    },
+    {
+      "id": 2,
+      "text": "asd"
+    }
+  ],
+  "sell": [],
+  "intrest": []
+}

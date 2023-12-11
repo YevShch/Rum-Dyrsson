@@ -1,7 +1,161 @@
+export default function buy() {
+  return $(`
+<form>
+  <section class="FiltreraBostad">
+    <fieldset>
+      <legend>Filtrera sökning:</legend>
+      <div>
+        <input type="radio" id="Hus" name="väljBostad" value="Hus" />
+        <label for="Hus">Hus</label>
+
+        <input type="radio" id="Lägenhet" name="väljBostad" value="Lägenhet" />
+        <label for="Lägenhet">Lägenhet</label>
+
+        <input type="radio" id="Villa" name="väljBostad" value="Villa" />
+        <label for="Villa">Villa</label>
+        <br><br>
+
+          <label for="prisBostad">Utgångspris: </label>
+
+          <input type="text" id="price" name="price" minlength="6" size="10" />
+          <br><br>
+
+            <label for="rumBostad">Antal rum: </label>
+
+            <select name="rum" id="rooms">
+              <option value="">--välj ett alternativ--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select><br><br>
+
+              <label for="areaBostad">Area (kvm): </label>
+
+              <input type="text" id="area" name="area" minlength="2" maxlength="3" size="10" />
+              <br><br>
+
+                <label for="balkongBostad">Balkong: </label>
+
+                <select name="BalkongBostad" id="Balcony">
+                  <option value="">--välj ett alternativ--</option>
+                  <option value="Balkong">Balkong</option>
+                  <option value="Ingen balkong">Ingen balkong</option>
+                </select><br><br>
+
+                  <label for="uteplatsBostad">Uteplats: </label>
+
+                  <select name="Uteplats" id="Outdoors">
+                    <option value="">--välj ett alternativ--</option>
+                    <option value="Uteplats">Uteplats</option>
+                    <option value="Ingen uteplats">Ingen uteplats</option>
+                  </select><br><br>
+
+                    <label for="våningBostad">Våning/våningar: </label>
+
+                    <select name="Våning" id="Floor">
+                      <option value="">--välj ett alternativ--</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select><br><br>
+
+                      <label for="hissBostad">Hiss: </label>
+
+                      <select name="Hiss" id="Elevator">
+                        <option value="">--välj ett alternativ--</option>
+                        <option value="Hiss">Hiss</option>
+                        <option value="Ingen hiss">Ingen hiss</option>
+                      </select><br><br>
+
+                        <label for="areaBostad">Byggnadsår: </label>
+
+                        <input type="text" id="YearOfBuilding" name="YearOfBuilding" minlength="4" maxlength="4" size="10" />
+                        <br><br>
+
+                          <label for="förrådBostad">Förråd/jordkälla: </label>
+
+                          <select name="Förråd" id="Storehouse">
+                            <option value="">--välj ett alternativ--</option>
+                            <option value="Förråd">Förråd</option>
+                            <option value="Inget förråd">Inget förråd</option>
+                            <option value="Jordkälla">Jordkälla</option>
+                          </select><br><br>
+
+                            <label for="parkeringBostad">Parkering/garage: </label>
+
+                            <select name="Parkering" id="ParkingLot">
+                              <option value="">--välj ett alternativ--</option>
+                              <option value="Parkering">Parkering</option>
+                              <option value="Ingen parkering">Ingen parkering</option>
+                              <option value="Garage">Garage</option>
+                            </select><br><br>
+
+                              <label for="innergårdBostad">Innergård/tomt: </label>
+
+                              <select name="Innergård" id="Courtyard">
+                                <option value="">--välj ett alternativ--</option>
+                                <option value="Innergård">Innergård</option>
+                                <option value="Ingen innergård">Ingen innergård</option>
+                                <option value="Tomt">Tomt</option>
+                              </select><br><br>
+                              </div>
+
+                                <div>
+                                  <button type="submit" id="sökBostad">Sök</button>
+                                </div>
+
+                              </fieldset>
+                            </section>
+                            </form>
+
+                            <div id="hus-container"></div>
+                            <script type="module" src="buy.js"></script>
+                            <script type="module" src="filter.js"></script>
+
 //import * as serRequest from './server-request.js';
 
 let isBuyFunctionExecuted = false;
 
+<div id="result"></div>
+
+        `)
+}
+
+function displayRadioValue() {
+  var ele = document.getElementsByName('väljBostad');
+
+  for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked)
+      document.getElementById("result").innerHTML
+        = ele[i].value;
+  }
+}
+
+//ger value till varje element
+document.getElementById("bostad").addEventListener("submit", function (event) {
+  event.preventDefault();
+  let price = document.getElementById("price").value;
+  let rooms = document.getElementById("rooms").value;
+  let area = document.getElementById("area").value;
+  let Balcony = document.getElementById("Balcony").value;
+  let Outdoors = document.getElementById("Outdoors").value;
+  let Floor = document.getElementById("Floor").value;
+  let Elevator = document.getElementById("Elevator").value;
+  let YearOfBuilding = document.getElementById("YearOfBuilding").value;
+  let Storehouse = document.getElementById("Storehouse").value;
+  let ParkingLot = document.getElementById("ParkingLot").value;
+  let Courtyard = document.getElementById("Courtyard").value;
+  alert(price, rooms, area, Balcony, Outdoors, Floor, Elevator, YearOfBuilding, Storehouse, ParkingLot, Courtyard);
+});
+
+/*
 export default function buy() {
   if (isBuyFunctionExecuted) {
     return;
@@ -240,3 +394,4 @@ getFilteredHouses(testFilters).then(houses => {
 $(document).ready(function () {
   buy();
 });
+*/
