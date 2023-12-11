@@ -1,22 +1,69 @@
-import { getAll } from "./server-request.js"
+import { getAll, addOne } from "./server-request.js"
+let sortedArray = []
 
 export default function buy() {
+  return $(`
+  <br>
+  <br>
+  <br>
+  <br>
+<section>
+  <label>sortera:</label>
+  <select id="sortBy" onchange="updateBySort()" required>
+  <option value="">--Välj gärna en option--</option>
+  <option value="price">Pris</option>
+  <option value="area">Area</option>
+  <option value="year">Byggnads år</option>
+  <option value="lägenhet">Visa bara lägenhet</option>
+  <option value="vila">Visa bara vila</option>
+  <option value="radhus">Visa bara radhus</option>
+  <option value="tomt">Visa bara tomt</option>
+</section>
+          `)
+}
+
+function updateBySort() {
+  sortedArray = []
   let data = getAllBuyData()
-  let husContainer = $('<div id="köpText"><h1>Här kan du köpa bostad</h1><div class="hus-container"></div></div>');
+  let sort = $('#sortBy').val()
+  switch (sort) {
+    case 'price':
+      console.log("sort price")
+      sortedArray = data.sort((a, b) => a.price - b.price)
+      break
+    case 'area':
+      console.log("sort area")
+      sortedArray = data.sort((a, b) => a.area - b.area)
+      break
+    case 'year':
+      console.log("sort year")
+      sortedArray = data.sort((a, b) => a.year - b.year)
+      break
+    case 'lägenhet':
+      console.log("filter lägenhet")
+      filterBy(data, "lägenhet")
+      break
+    case 'villa':
+      console.log("filter villa")
+      filterBy(data, "villa")
+      break
+    case 'radhus':
+      console.log("filter radhus")
+      filterBy(data, "radhus")
+      break
+    case 'tomt':
+      console.log("filter tomt")
+      filterBy(data, "tomt")
+      break
+  }
+}
 
-  // Loopa igenom husdata och skapa element för varje hus
-  data.forEach(function (hus) {
-    let imagePath = hus.image || 'home page house.jpg'; // enkel bild bara för att ha en yta att klicka på ändra denna
-
-    // Skapa husinformationselement
-    let husInfo = $(`<div class="hus-info" data-id="${hus.id}" style="position: relative;">
-                              <img src="${imagePath}" alt="Bild av ${hus.type}" class="hus-bild" style="width:200px;height:200px;cursor:pointer;">
-                              <div class="buttons-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; z-index: 1;">
-                                <button class="btn btn-warning redigera-btn">Redigera</button>
-                                <button class="btn btn-danger radera-btn">Radera</button>
-                              </div>
-                           </div>`);
-  })
+function filterBy(data, item) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].type === item) {
+      sortedArray.push(data[i])
+    }
+  }
 }
 
 async function getAllBuyData() {
@@ -24,6 +71,11 @@ async function getAllBuyData() {
   console.log(data)
   return data
 }
+
+//addOne
+$("").click(function () {
+  addOne("intrest", intrestMessage)
+})
 
 //import * as serRequest from './server-request.js';
 /*

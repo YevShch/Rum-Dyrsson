@@ -153,8 +153,6 @@ export default function sell() {
 export function addSellsEventlistner() {
   $("#sell").on("submit", function (event) {
     event.preventDefault()
-    console.log("Knappen fungerar!")
-    alert("Nu är vi inne!");
     let type = $('#type').val();
     let address = $('#address').val();
     let city = $('#city').val();
