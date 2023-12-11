@@ -124,20 +124,21 @@ export default function buy() {
 let isBuyFunctionExecuted = false;
 
 <div id="result"></div>
-<script>
-//ger value till varje element
-  function displayRadioValue() {
-      var ele = document.getElementsByName('väljBostad');
 
-      for (i = 0; i < ele.length; i++) {
-        if (ele[i].checked)
-          document.getElementById("result").innerHTML
-            = ele[i].value;
-      }
-    }
         `)
 }
 
+function displayRadioValue() {
+  var ele = document.getElementsByName('väljBostad');
+
+  for (i = 0; i < ele.length; i++) {
+    if (ele[i].checked)
+      document.getElementById("result").innerHTML
+        = ele[i].value;
+  }
+}
+
+//ger value till varje element
 document.getElementById("bostad").addEventListener("submit", function (event) {
   event.preventDefault();
   let price = document.getElementById("price").value;
