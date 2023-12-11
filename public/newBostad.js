@@ -1,8 +1,7 @@
 export default class NewBostad {
-  constructor(type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone) {
+  constructor(type, address, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone) {
     this.type = type;
     this.address = address;
-    this.city = city;
     this.price = price;
     this.rooms = rooms;
     this.area = area;
@@ -38,7 +37,6 @@ export default class NewBostad {
       "photo": this.getPhoto(this.type),
       "type": this.type,
       "address": this.address,
-      "city": this.city,
       "price": this.price,
       "rooms": this.rooms,
       "area": this.area,

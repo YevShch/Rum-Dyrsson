@@ -31,12 +31,6 @@ export default function sell() {
 <br>
 
 <section>
-<label for="city">Ort:</label>
-<input type="text" id="city" pattern="[A-Za-z]+" required/>
-</section>
-<br>
-
-<section>
 <label for="price">Utgångspis:</label>
 <input type="number" id="price" name="price" min="50000" max="999000000" value="50000" step="10000" title="Pris ska vara sifror"/>
 </section>
@@ -155,7 +149,6 @@ export function addSellsEventlistner() {
     event.preventDefault()
     let type = $('#type').val();
     let address = $('#address').val();
-    let city = $('#city').val();
     let price = $('#price').val();
     let rooms = $('#rooms').val();
     let area = $('#area').val();
@@ -171,7 +164,7 @@ export function addSellsEventlistner() {
     let email = $('#email').val();
     let phone = $('#phone').val();
 
-    let bostad = new NewBostad(type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone)
+    let bostad = new NewBostad(type, address, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone)
     console.log(bostad);
     addOne("sell", bostad.dataInfo());
 
