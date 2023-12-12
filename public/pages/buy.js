@@ -1,4 +1,4 @@
-export default function buy() {
+export default async function buy() {
   return $(`
 <form>
   <section class="FiltreraBostad">
@@ -127,7 +127,7 @@ let isBuyFunctionExecuted = false;
 
         `)
 }
-
+/*
 function displayRadioValue() {
   var ele = document.getElementsByName('väljBostad');
 
@@ -154,7 +154,7 @@ document.getElementById("bostad").addEventListener("submit", function (event) {
   let Courtyard = document.getElementById("Courtyard").value;
   alert(price, rooms, area, Balcony, Outdoors, Floor, Elevator, YearOfBuilding, Storehouse, ParkingLot, Courtyard);
 });
-
+*/
 /*
 export default function buy() {
   if (isBuyFunctionExecuted) {

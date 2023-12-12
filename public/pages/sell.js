@@ -1,5 +1,5 @@
-import { addOne } from "./server-request.js";
-import NewBostad from "./newBostad.js";
+import { addOne } from "../server-request.js";
+import NewBostad from "../class/newBostad.js";
 
 export default function sell() {
   return $(`

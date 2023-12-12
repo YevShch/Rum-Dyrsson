@@ -1,39 +1,39 @@
-import sell, { addSellsEventlistner } from "./sell.js"
-import buy from "./buy.js"
-import realters from "./realters.js"
-import login, { addLoginsEventlistner } from "./login.js"
-import admin from "./admin.js"
-import buyList from "./buyList.js"
-import sellList from "./sellList.js"
-import intrestsList from "./intrestList.js"
+import sell, { addSellsEventlistner } from "./pages/sell.js"
+import buy from "./pages/buy.js"
+import realters from "./pages/realters.js"
+import login, { addLoginsEventlistner } from "./pages/login.js"
+import admin from "./pages/admin.js"
+import buyList from "./pages/buyList.js"
+import sellList from "./pages/sellList.js"
+import intrestsList from "./pages/intrestList.js"
 
-function router() {
+async function router() {
   switch (location.hash) {
     case "#sell":
-      $('main').html(sell())
+      $('main').html(await sell())
       addSellsEventlistner()
       break
     case "#buy":
-      $('main').html(buy())
+      $('main').html(await buy())
       break
     case "#realters":
       $('main').html(realters())
       break
     case "#login":
-      $('main').html(login())
+      $('main').html(await login())
       addLoginsEventlistner()
       break
     case "#admin":
       $('main').html(admin())
       break
     case "#buyList":
-      $('main').html(buyList())
+      $('main').html(await buyList())
       break
     case "#sellList":
-      $('main').html(sellList())
+      $('main').html(await sellList())
       break
     case "#intrestsList":
-      $('main').html(intrestsList())
+      $('main').html(await intrestsList())
       break
     default:
       $('main').html(`<h1 id="default">Välkommen till bostadsmäklarfirman Dhyr & Rumson</h1><h2>Hemsidan där du kan hitta ditt drömhus!<br><h2>

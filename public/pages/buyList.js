@@ -1,4 +1,4 @@
-import { getAll, getOne, addOne, deleteOne } from "./server-request.js"
+import { getAll, getOne, addOne, deleteOne } from "../server-request.js"
 
 export default function openBuyList() {
   const data = getAllBuyData()

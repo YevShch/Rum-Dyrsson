@@ -1,4 +1,4 @@
-import { getOne } from "./server-request.js"
+import { getOne } from "../server-request.js"
 
 export default function login() {
   return $(`
