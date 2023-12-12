@@ -15,7 +15,7 @@ export default function login() {
             <label for="password">Lösenord</label>
             <input type="password" id="password" required>
 
-              <button type="submit" value="Logga in">Log in</button>
+              <button id="logInBtn" type="submit" value="Logga in">Log in</button>
               </form>
           </section>
           `)

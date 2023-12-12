@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sell, { addSellsEventlistner } from "./pages/sell.js"
 import buy from "./pages/buy.js"
 import realters from "./pages/realters.js"
@@ -6,6 +7,16 @@ import admin from "./pages/admin.js"
 import buyList from "./pages/buyList.js"
 import sellList from "./pages/sellList.js"
 import intrestsList from "./pages/intrestList.js"
+=======
+import sell, { addSellsEventlistner } from "./sell.js"
+import buy from "./buy.js"
+import realters from "./realters.js"
+import login, { addLoginsEventlistner } from "./login.js"
+import admin from "./admin.js"
+import buyList from "./buyList.js"
+import sellList from "./pages/sellList.js"
+import intrestsList from "./intrestList.js"
+>>>>>>> 313942c70999bce4f6d154bcb24e6179300a9b45
 
 async function router() {
   switch (location.hash) {

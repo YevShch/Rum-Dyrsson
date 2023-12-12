@@ -20,7 +20,6 @@
   justify-content: center;
   margin-left: 70vh;
   margin-top: 15vh;
-
 }
 
 #loginForm {
@@ -80,15 +79,6 @@
   color: rgb(44, 44, 108);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
-header>.main-nav {
-  background-color: rgba(190, 223, 162, 0.848);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 3vh;
-}
-
 
 #mäklare {
   text-align: center;

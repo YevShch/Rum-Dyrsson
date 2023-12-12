@@ -1,9 +1,13 @@
 import { addOne } from "../server-request.js";
+<<<<<<< HEAD
 import NewBostad from "../class/newBostad.js";
+=======
+import NewBostad from "./newBostad.js";
+>>>>>>> 313942c70999bce4f6d154bcb24e6179300a9b45
 
 export default function sell() {
   return $(`
-  <section id="sellPage">
+  <section id="säljFormulär">
 
   <section id="image"> 
    <section id="sellTitle">
@@ -136,7 +140,7 @@ export default function sell() {
 </section>
 <br>
 
-<button type="submit">Spara</button>
+<button id="formulärBtn" type="submit">Spara</button>
   </form>
     </section>
 
