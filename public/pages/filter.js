@@ -1,6 +1,6 @@
 import { houses } from './houses.js';
 import { displayHouses } from './buy.js';
-
+//filtrera bostäder
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('sökBostad').addEventListener('click', (e) => {
     e.preventDefault();

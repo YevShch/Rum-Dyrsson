@@ -8,12 +8,15 @@ export default async function buy() {
   <title>Filtrera</title>
 </head>
 
+<h1 id="kopText">Här kan du köpa bostad<h1>
+
 <body>
   
 
 
-  
+  <h3>
 <form id="bostad">
+    
     <section class="FiltreraBostad">
     <fieldset>
     <legend>Filtrera sökning:</legend>
@@ -67,7 +70,7 @@ export default async function buy() {
 
 
 
-<label for="balkongBostad">Balkong: </label>
+<label for="balkongBostad">Balkong/uteplats: </label>
 
 <select name="BalkongBostad" id="balcony">
   <option value="">--välj ett alternativ--</option>
@@ -159,7 +162,7 @@ export default async function buy() {
 <div>
   <button type="submit" id="sökBostad">Sök</button>
 </div>
-
+<h3>
 </fieldset>
 </section>
 
@@ -175,14 +178,15 @@ export default async function buy() {
 
 </html>
 
-//import * as serRequest from './server-request.js';
-
-let isBuyFunctionExecuted = false;
 
 <div id="result"></div>
 
         `)
 }
+//import * as serRequest from './server-request.js';
+
+//let isBuyFunctionExecuted = false;
+
 /*
 function displayRadioValue() {
   var ele = document.getElementsByName('väljBostad');

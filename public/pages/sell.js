@@ -3,7 +3,7 @@ import NewBostad from "../class/newBostad.js";
 
 export default function sell() {
   return $(`
-  <section id="säljFormulär">
+  <section id="saljFormular">
 
   <section id="image"> 
    <section id="sellTitle">

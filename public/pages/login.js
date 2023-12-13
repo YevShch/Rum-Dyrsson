@@ -5,7 +5,7 @@ export default async function login() {
     console.log('här!')
     return $(`
     <section id="loginHead">
-      <h1>Här kan du logas in på din konto</h1>
+      <h1>Logga in</h1>
     </section>
 
       <section id="login">

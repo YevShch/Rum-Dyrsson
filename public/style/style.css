@@ -53,12 +53,12 @@ body {
 
 #saljFormular {
   text-align: center;
-  background-color: rgb(205, 238, 251);
+  background-color: rgba(205, 238, 251, 0.874);
   padding: 3px;
   width: 80vh;
   height: 130vh;
   justify-content: center;
-  margin-left: 55vh;
+  margin-left: 60vh;
   margin-top: 15vh;
   margin-bottom: 5vh;
   color: rgb(44, 44, 108);
@@ -81,12 +81,33 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#bostad {
+  background-color: rgba(161, 214, 210, 0.873);
+  width: 90vh;
+  height: 82vh;
+  text-align: center;
+  justify-content: center;
+  margin-left: 55vh;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #maklare {
   text-align: center;
   margin-top: 15vh;
   color: rgb(44, 44, 108);
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: large;
+  background-color: rgba(237, 255, 220, 0.789);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 70vh;
+  height: 45vh;
+  justify-content: center;
+  margin-left: 65vh;
+  margin-top: 30vh;
+
 }
 
 #maklareNamn {
@@ -134,12 +155,26 @@ nav>a {
   font-size: larger
 }
 
+
+#mainText {
+  background-color: rgba(240, 248, 255, 0.812);
+  margin-top: 20vh;
+  justify-content: center;
+  align-items: center;
+  width: 95vh;
+  margin-left: 50vh;
+  
+}
+
+
 #default {
   text-align: center;
   margin-top: 15vh;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgb(44, 44, 108);
 }
+
+
 
 .loginAdmin {
 
