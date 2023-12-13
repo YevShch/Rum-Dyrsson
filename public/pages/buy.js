@@ -157,7 +157,7 @@ export default async function buy() {
 
 <div class="sortHouses">
 	<span>Sortera efter:</span>
-	<select id="sortBy" onchange="sortBy()" required>
+	<select id="sortBy" onchange="sortByThe()" required>
 	<option value="">-Välj ett alternativ-</option>
 	<option value="newAd">Nyaste annonsen</option>
 	<option value="oldAd">Äldsta annonsen</option>
@@ -180,6 +180,7 @@ export default async function buy() {
 <div id="hus-container"></div>
 <script type="module" src="buy.js"></script>
 <script type="module" src="filter.js"></script>
+<script> <script>
 </body>
 
 </html>
