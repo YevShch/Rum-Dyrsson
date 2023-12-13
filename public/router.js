@@ -2,11 +2,10 @@ import sell, { addSellsEventlistner } from "./pages/sell.js"
 import buy from "./pages/buy.js"
 import realters from "./pages/realters.js"
 import login, { addLoginsEventlistner } from "./pages/login.js"
-import admin from "./pages/admin.js"
+import admin, { addLogoutEventlistner } from "./pages/admin.js"
 import buyList from "./pages/buyList.js"
 import sellList from "./pages/sellList.js"
 import intrestsList from "./pages/intrestList.js"
-
 
 async function router() {
   switch (location.hash) {
@@ -26,6 +25,7 @@ async function router() {
       break
     case "#admin":
       $('main').html(admin())
+      addLogoutEventlistner()
       break
     case "#buyList":
       $('main').html(await buyList())

@@ -1,3 +1,5 @@
+import { update } from "../server-request.js"
+
 export default function admin() {
   return (`
    <div id="admin">
@@ -19,8 +21,8 @@ export default function admin() {
 </section>
 <br>
 
-<section id="logOut">
-<button onclick="logOut">Logga ut</button>
+<section >
+<button id="handleLogout">Logga ut</button>
 </section>
 <br>
 
@@ -36,12 +38,21 @@ function openSellList () {
 function openIntrestsList () {
   window.location.href = "#intrestsList";
 };
-
-function logOut () {
-  window.location.href = "#login";
-};
-
 </script>
   `
   )
+}
+
+export function addLogoutEventlistner() {
+  $("#handleLogout").on("click", function () {
+    console.log('knappen är tryckt')
+    handleLogout()
+    window.location.href = "#login";
+  }
+  );
+}
+
+export async function handleLogout() {
+  console.log('update')
+  await update("admin", 1, "logIn", 0)
 }

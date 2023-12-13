@@ -3,7 +3,8 @@
     {
       "id": 1,
       "username": "abc",
-      "password": 123
+      "password": 123,
+      "logIn": 1
     }
   ],
   "buy": [

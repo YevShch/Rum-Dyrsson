@@ -1,7 +1,9 @@
-import { getOne } from "../server-request.js"
+import { getOne, update } from "../server-request.js"
 
-export default function login() {
-  return $(`
+export default async function login() {
+  if (await checkLogIn()) {
+    console.log('här!')
+    return $(`
     <section id="loginHead">
       <h1>Här kan du logas in på din konto</h1>
     </section>
@@ -19,6 +21,9 @@ export default function login() {
               </form>
           </section>
           `)
+  } else {
+    window.location.href = "#admin";
+  }
 }
 
 export function addLoginsEventlistner() {
@@ -26,18 +31,30 @@ export function addLoginsEventlistner() {
     event.preventDefault()
     const username = $('#username').val();
     const password = $('#password').val();
-    someFunction(username, password)
+    vailidLogin(username, password)
   }
   );
 }
 
-async function someFunction(username, password) {
-  const user = await getOne("admin", 1);
-  console.log(user)
+async function vailidLogin(username, password) {
+  const user = await getOne("admin", 1)
   if (user.username == username && user.password == password) {
     console.log("Rät inlogningen!")
+    await update("admin", 1, "logIn", 1)
     window.location.href = "#admin";
   } else {
     alert("det är fel på användarnamnet eller lösenordet")
+  }
+}
+
+async function checkLogIn() {
+  const user = await getOne("admin", 1)
+  console.log(user.logIn)
+  if (user.logIn === 0) {
+    console.log(true)
+    return true
+  } else {
+    console.log(false)
+    return false
   }
 }
