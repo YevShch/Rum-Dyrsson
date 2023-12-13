@@ -1,18 +1,10 @@
 export default async function buy() {
   return $(`
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filtrera</title>
-</head>
 
 <h1 id="kopText">Här kan du köpa bostad<h1>
 
 <body>
   
-
 
   <h3>
 <form id="bostad">
@@ -31,8 +23,6 @@ export default async function buy() {
       <label for="Villa">Villa</label>
       <br><br>
    
-
-
 
 
 
@@ -160,14 +150,30 @@ export default async function buy() {
 
 
 <div>
-  <button type="submit" id="sökBostad">Sök</button>
+  <button type="submit" id="sökBostad">Sök</button><br><br>
 </div>
-<h3>
+
+
+
+<div class="sortHouses">
+				<span>Sortera efter:</span>
+				<select id="sortBy" onchange="sortBy()" required>
+					<option value="">-Välj ett alternativ-</option>
+					<option value="newAd">Nyaste annonsen</option>
+					<option value="oldAd">Äldsta annonsen</option>
+					<option value="cheapHouse">Billigaste bostaden</option>
+					<option value="expensiveHouse">Dyraste bostaden</option>
+					<option value="smallHouse">Minsta bostaden (kvm)</option>
+					<option value="bigHouse">Största bostaden (kvm)</option>
+					<option value="newHouse">Nyaste bostaden</option>
+					<option value="oldHouse">Äldsta bostaden</option>
+				</select>
+			</div>
+      <h3>
 </fieldset>
 </section>
 
-
-<img src="home page house.jpg">
+<img src="image/home page house.jpg">
 
 </form>
 
