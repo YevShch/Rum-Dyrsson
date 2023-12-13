@@ -1,11 +1,11 @@
-import { addOne } from "./server-request.js";
-import NewBostad from "./newBostad.js";
+import { addOne } from "../server-request.js";
+import NewBostad from "../class/newBostad.js";
 
 export default function sell () {
   return $( `
-  <section id="sellPage">
+  <div id="sellPage">
 
-  <section id="image"> 
+  <div id="image"> 
    <section id="sellTitle">
    <h1>Sälj din bostad med oss!</h1>
    <h2>Vänligen fyll i formuläret:</h2>
@@ -32,7 +32,7 @@ export default function sell () {
 
 <section>
 <label for="city">Ort:</label>
-<input type="text" id="city" pattern="[A-Za-z]+" required/>
+<input type="text" id="city" pattern="[A-Za-zÅåÄäÖö]+" required/>
 </section>
 <br>
 
@@ -120,13 +120,13 @@ export default function sell () {
 
 <section>
 <label for="name">Namn: </label>
-<input type="text" name="name" id="name" pattern="[A-Za-z]+" required />
+<input type="text" name="name" id="name" pattern="[A-Za-zÅåÄäÖö]+" required />
 </section>
 <br>
 
 <section>
 <label for="lastName">Efternamn: </label>
-<input type="text" name="lastName" id="lastName" pattern="[A-Za-z]+" required />
+<input type="text" name="lastName" id="lastName" pattern="[A-Za-zÅåÄäÖö]+" required />
 </section>
 <br>
 
@@ -142,11 +142,12 @@ export default function sell () {
 </section>
 <br>
 
+
 <button type="submit">Spara</button>
   </form>
-    </section>
+    </div>
 
-  </section>
+  </div>
   `);
 }
 
@@ -173,7 +174,7 @@ export function addSellsEventlistner () {
     let email = $( '#email' ).val();
     let phone = $( '#phone' ).val();
 
-   
+
     console.log( "new bostad are created!" );
 
     let bostad = new NewBostad( type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, name, lastName, email, phone )

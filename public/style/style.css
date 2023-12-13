@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hedvig Letters Serif', serif;
+}
+/* 
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+nav>a {
+  color: rgb(28, 98, 228);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  font-size: larger;
+} */
+
+#default {
+  text-align: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+#login {
+  text-align: center;
+  background-color: rgb(229, 212, 244);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: purple;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 55vh;
+  height: 50vh;
+  justify-content: center;
+  margin-left: 70vh;
+  margin-top: 15vh;
+}
+
+#loginForm {
+  margin-top: 5vh;
+}
+
+#logInBtn {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(201, 240, 246);
+  color: purple;
+  height: 8vh;
+  width: 20vh;
+  margin-top: 15vh;
+  font-size: large;
+}
+
+#home>img {
+  background-image: url(./home\ house\ page.jpg );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  background-color: rgb(204, 200, 193);
+  display: flex;
+  justify-content: center;
+}
+
+nav>a {
+  font-family: 'Hedvig Letters Serif', serif;
+  margin: 0 5vw;
+  font-size: 3vh;
+  color: white;
+  text-decoration: none;
+}
+
+#logo {
+  width: 165px;
+  height: 24px;
+}
+
+
+
+#sellTitle {
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(80, 19, 8);
+} 
+
+#sellPage {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(204, 200, 193);
+}
+
+
+#homePage {
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(194, 149, 164);
+}
+
+#homeTitle {
+  margin-top: 700px;
+  margin-bottom: 700px;
+  color: wheat;
+}
+
+#sellPage>#image {
+  width: 100vw;
+  background-image: url("./image/sell.webp");
+  background-repeat: no-repeat;
+}
+
+ #sell {
+  width: 600px;
+  height: flex;
+  margin: 50px 450px 150px 450px;
+  padding: 5px 10px 5px 20px;
+  background-color: rgb(218, 206, 190);
+  color: rgb(80, 19, 8);
+  font-family: 'Hedvig Letters Serif', serif;
+ }
+
+#sell>section {
+  padding-top: 5px;
+  font-size: 20px;
+  clear: both;
+  text-align: right;
+}
+
+#sell>section>label {
+  float: left;
+}
+
+#sell>button {
+  width: 20vh;
+  height: 5vh;
+  margin-top: 2vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  background-color: rgb(169, 217, 247);
+  
+}
+
+#hem {
+  background-image: url("./image/home1.webp");
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 500px) {
+  nav>a {
+    font-size: 2vh;
+  }
+
+  #sell {
+   margin: 50px 10px 150px 10px;
+  width: auto;
+   }
+  section> :nth-child(2) {
+    align-self: center;
+  }
+
+  section> :nth-child(3) {
+    display: none;
+  }
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 80%;
+}
