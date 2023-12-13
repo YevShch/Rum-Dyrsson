@@ -156,20 +156,20 @@ export default async function buy() {
 
 
 <div class="sortHouses">
-				<span>Sortera efter:</span>
-				<select id="sortBy" onchange="sortBy()" required>
-					<option value="">-Välj ett alternativ-</option>
-					<option value="newAd">Nyaste annonsen</option>
-					<option value="oldAd">Äldsta annonsen</option>
-					<option value="cheapHouse">Billigaste bostaden</option>
-					<option value="expensiveHouse">Dyraste bostaden</option>
-					<option value="smallHouse">Minsta bostaden (kvm)</option>
-					<option value="bigHouse">Största bostaden (kvm)</option>
-					<option value="newHouse">Nyaste bostaden</option>
-					<option value="oldHouse">Äldsta bostaden</option>
-				</select>
-			</div>
-      <h3>
+	<span>Sortera efter:</span>
+	<select id="sortBy" onchange="sortBy()" required>
+	<option value="">-Välj ett alternativ-</option>
+	<option value="newAd">Nyaste annonsen</option>
+	<option value="oldAd">Äldsta annonsen</option>
+	<option value="cheapHouse">Billigaste bostaden</option>
+	<option value="expensiveHouse">Dyraste bostaden</option>
+	<option value="smallHouse">Minsta bostaden (kvm)</option>
+	<option value="bigHouse">Största bostaden (kvm)</option>
+	<option value="newHouse">Nyaste bostaden</option>
+	<option value="oldHouse">Äldsta bostaden</option>
+	</select>
+	</div>
+  <h3>
 </fieldset>
 </section>
 
