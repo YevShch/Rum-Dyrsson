@@ -3,7 +3,7 @@
     {
       "id": 1,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Topvägen 41",
       "price": 1000000,
       "rooms": 4,
@@ -23,7 +23,7 @@
     {
       "id": 2,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Kunskapsvägen 50",
       "price": 750000,
       "rooms": 2,
@@ -43,7 +43,7 @@
     {
       "id": 3,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
-      "type": "Villa",
+      "type": "villa",
       "address": "Villaville kulla 2",
       "price": 1500000,
       "rooms": 5,
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Mariegatan 75",
       "price": 900000,
       "rooms": 3,
@@ -83,7 +83,7 @@
     {
       "id": 5,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Torevägen 58",
       "price": 1000000,
       "rooms": 4,
@@ -103,7 +103,7 @@
     {
       "id": 6,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
-      "type": "Villa",
+      "type": "villa",
       "address": "Kalasvägen 23",
       "price": 1100000,
       "rooms": 4,
@@ -123,7 +123,7 @@
     {
       "id": 7,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Elvägen 1",
       "price": 1700000,
       "rooms": 6,
@@ -143,7 +143,7 @@
     {
       "id": 8,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Technogatan 30",
       "price": 1000000,
       "rooms": 3,
@@ -163,7 +163,7 @@
     {
       "id": 9,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
-      "type": "Villa",
+      "type": "villa",
       "address": "Lockelookvägen 53",
       "price": 1400000,
       "rooms": 4,
@@ -183,7 +183,7 @@
     {
       "id": 10,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Triptraptrullgatan 10",
       "price": 800000,
       "rooms": 3,
@@ -203,7 +203,7 @@
     {
       "id": 11,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Skyrocketvägen 48",
       "price": 950000,
       "rooms": 3,
@@ -223,7 +223,7 @@
     {
       "id": 12,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
-      "type": "Villa",
+      "type": "villa",
       "address": "Booleangatan 55",
       "price": 1200000,
       "rooms": 4,
@@ -243,7 +243,7 @@
     {
       "id": 13,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Bergodalbanevägen 40",
       "price": 1500000,
       "rooms": 4,
@@ -263,7 +263,7 @@
     {
       "id": 14,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Muffingatan 21",
       "price": 650000,
       "rooms": 2,
@@ -283,7 +283,7 @@
     {
       "id": 15,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
-      "type": "Villa",
+      "type": "villa",
       "address": "Dragondalsgatan",
       "price": 1200000,
       "rooms": 3,
@@ -303,7 +303,7 @@
     {
       "id": 16,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Krokodilvägen 39",
       "price": 900000,
       "rooms": 3,
@@ -323,7 +323,7 @@
     {
       "id": 17,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Spacevägen",
       "price": 900000,
       "rooms": 3,
@@ -343,7 +343,7 @@
     {
       "id": 18,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
-      "type": "Villa",
+      "type": "villa",
       "address": "Programmeringsgatan 37",
       "price": 1500000,
       "rooms": 5,
@@ -363,7 +363,7 @@
     {
       "id": 19,
       "photo": "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz",
-      "type": "Hus",
+      "type": "radhus",
       "address": "Fridofröjdvägen 50",
       "price": 1300000,
       "rooms": 4,
@@ -383,7 +383,7 @@
     {
       "id": 20,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "Lägenhet",
+      "type": "lägenhet",
       "address": "Grafikvägen 25",
       "price": 1000000,
       "rooms": 3,

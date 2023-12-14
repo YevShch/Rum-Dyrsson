@@ -60,9 +60,9 @@ export default async function buy() {
         <label for="residenceType">Bostadstyp:</label>
         <select id="residenceType">
           <option value="all">Alla</option>
-          <option value="Villa">Villa</option>
-          <option value="Lägenhet">Lägenhet</option>
-          <option value="Radhus">Radhus</option>
+          <option value="villa">Villa</option>
+          <option value="lägenhet">Lägenhet</option>
+          <option value="radhus">Radhus</option>
         </select>
 
         <button onclick="filterResidences()">Filtrera</button>
@@ -81,7 +81,7 @@ export default async function buy() {
 window.showResidenceDetails = async (residenceId) => {
   const residence = await getResidenceById(residenceId);
   document.getElementById("app").innerHTML = renderResidenceDetails(residence);
-};
+}
 
 async function getResidenceById(id) {
   return await getOne("buy", id)
@@ -89,7 +89,7 @@ async function getResidenceById(id) {
 
 window.backToAllResidences = async () => {
   document.getElementById("app").innerHTML = await buy();
-};
+}
 
 window.filterResidences = async function () {
   try {
@@ -139,12 +139,6 @@ window.filterResidences = async function () {
   }
 }
 
-/*
-window.toggleInterestForm = function (residenceId) {
-  const form = document.getElementById(`interestForm-${residenceId}`);
-  form.style.display = form.style.display === 'none' ? 'block' : 'none';
-};
-*/
 function validatePhone(phone) {
   const re = /^[0-9]+$/;
   return re.test(phone);
