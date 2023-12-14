@@ -1,35 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Hedvig Letters Serif', serif;
-}
-/* 
-nav {
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  padding: 1vh 0;
-  display: flex;
-  justify-content: center;
-}
-
-
-nav>a {
-  color: rgb(28, 98, 228);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-decoration: none;
-  font-size: larger;
-} */
-
-#default {
-  text-align: center;
-  margin-top: 15vh;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(44, 44, 108);
+  background-image: url(https://live.staticflickr.com/3797/10798143964_5fc2e95a00_b.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 #login {
@@ -62,126 +36,11 @@ nav>a {
   font-size: large;
 }
 
-#home>img {
-  background-image: url(./home\ house\ page.jpg );
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-
-nav {
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  padding: 1vh 0;
-  background-color: rgb(204, 200, 193);
-  display: flex;
-  justify-content: center;
-}
-
-nav>a {
-  font-family: 'Hedvig Letters Serif', serif;
-  margin: 0 5vw;
-  font-size: 3vh;
-  color: white;
-  text-decoration: none;
-}
-
-#logo {
-  width: 165px;
-  height: 24px;
-}
-
-
-
-#sellTitle {
-  text-align: center;
-  margin-top: 100px;
-  color: rgb(80, 19, 8);
-} 
-
-#sellPage {
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color:rgb(204, 200, 193);
-}
-
-
-#homePage {
-  width: 100vw;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(194, 149, 164);
-}
-
-#homeTitle {
-  margin-top: 700px;
-  margin-bottom: 700px;
-  color: wheat;
-}
-
-#sellPage>#image {
-  width: 100vw;
-  background-image: url("./image/sell.webp");
-  background-repeat: no-repeat;
-}
-
- #sell {
-  width: 600px;
-  height: flex;
-  margin: 50px 450px 150px 450px;
-  padding: 5px 10px 5px 20px;
-  background-color: rgb(218, 206, 190);
-  color: rgb(80, 19, 8);
-  font-family: 'Hedvig Letters Serif', serif;
- }
-
-#sell>section {
-  padding-top: 5px;
-  font-size: 20px;
-  clear: both;
-  text-align: right;
-}
-
-#sell>section>label {
-  float: left;
-}
-
-#sell>button {
-  width: 20vh;
-  height: 5vh;
-  margin-top: 2vh;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: rgb(44, 44, 108);
-  background-color: rgb(169, 217, 247);
-  
-}
-
-#hem {
-  background-image: url("./image/home1.webp");
-  width: 100vw;
-  background-repeat: no-repeat;
-}
-
 @media screen and (max-width: 500px) {
   nav>a {
-    font-size: 2vh;
+    font-size: 3vh;
   }
 
-  #sell {
-   margin: 50px 10px 150px 10px;
-  width: auto;
-   }
   section> :nth-child(2) {
     align-self: center;
   }
@@ -189,7 +48,146 @@ nav>a {
   section> :nth-child(3) {
     display: none;
   }
+
 }
+
+#saljFormular {
+  text-align: center;
+  background-color: rgba(205, 238, 251, 0.874);
+  padding: 3px;
+  width: 80vh;
+  height: 130vh;
+  justify-content: center;
+  margin-left: 60vh;
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#formularBtn {
+  width: 20vh;
+  height: 5vh;
+  margin-top: 2vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  background-color: rgb(169, 217, 247);
+}
+
+#kopText {
+  text-align: center;
+  margin-top: 15vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#bostad {
+  background-color: rgba(161, 214, 210, 0.873);
+  width: 90vh;
+  height: 90vh;
+  text-align: center;
+  justify-content: center;
+  margin-left: 55vh;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#maklare {
+  text-align: center;
+  margin-top: 15vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  background-color: rgba(237, 255, 220, 0.789);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 70vh;
+  height: 45vh;
+  justify-content: center;
+  margin-left: 65vh;
+  margin-top: 30vh;
+
+}
+
+#maklareNamn {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+h2 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+h3 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+header>.main-nav {
+  background-color: rgba(190, 223, 162, 0.848);
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea015264-1416-4cb6-9092-7b722f6d6953/df8o06q-650f3a9a-96f2-4cdb-ae37-85bb81ad3c49.png/v1/fill/w_1280,h_960,q_80,strp/colorful_gradient_texture_or_bkg_v2_by_thestockwarehouse_df8o06q-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvZWEwMTUyNjQtMTQxNi00Y2I2LTkwOTItN2I3MjJmNmQ2OTUzXC9kZjhvMDZxLTY1MGYzYTlhLTk2ZjItNGNkYi1hZTM3LTg1YmI4MWFkM2M0OS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xDjigDbZaoVSzSWKRnQn5TeS1CBk_59JY8AcJ725XfQ);
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4vh;
+}
+
+nav>a {
+  color: rgb(28, 98, 228);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  font-size: larger
+}
+
+
+#mainText {
+  background-color: rgba(240, 248, 255, 0.812);
+  margin-top: 20vh;
+  justify-content: center;
+  align-items: center;
+  width: 95vh;
+  margin-left: 50vh;
+  
+}
+
+
+#default {
+  text-align: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+
+
+.loginAdmin {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  text-align: right;
+  margin-right: 10vh;
+  margin-top: 1vh;
+}
+
+
 
 .modal-container {
   position: fixed;

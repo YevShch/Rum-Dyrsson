@@ -1,8 +1,7 @@
 export default class NewBostad {
-  constructor ( type, address, city, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, name, lastName, email, phone ) {
+  constructor(type, address, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone) {
     this.type = type;
     this.address = address;
-    this.city = city;
     this.price = price;
     this.rooms = rooms;
     this.area = area;
@@ -13,14 +12,14 @@ export default class NewBostad {
     this.storehouse = storehouse;
     this.parking = parking;
     this.garden = garden;
-    this.name = name;
+    this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.phone = phone;
   }
 
-  getPhoto ( type ) {
-    switch ( type ) {
+  getPhoto(type) {
+    switch (type) {
       case 'lägenhet':
         return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU"
       case 'vila':
@@ -32,14 +31,12 @@ export default class NewBostad {
     }
   }
 
-
-  dataInfo () {
+  dataInfo() {
     return {
       "id": 'id' + new Date().getTime(),
-      "photo": this.getPhoto(this.type),  
+      "photo": this.getPhoto(this.type),
       "type": this.type,
       "address": this.address,
-      "city": this.city,
       "price": this.price,
       "rooms": this.rooms,
       "area": this.area,
@@ -50,7 +47,7 @@ export default class NewBostad {
       "storehouse": this.storehouse,
       "parking": this.parking,
       "garden": this.garden,
-      "name": this.name,
+      "firstName": this.firstName,
       "lastName": this.lastName,
       "email": this.email,
       "phone": this.phone
