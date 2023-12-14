@@ -5,19 +5,20 @@ export default function admin() {
    <div id="admin">
    <h1>Admin sida</h1>
   <div>
-  
+
+  <div id="adminLogIn">
  <form id="#buyList">
-<button onclick="openBuyList()">Buy lista</button>
+<button id="adminBuy" onclick="openBuyList()">Köp lista</button>
 </form>
 <br>
 
 <section id="#sellList">
-<button onclick="openSellList()">Sell message</button>
+<button id="adminSell" onclick="openSellList()">Sälj lista</button>
 </section>
 <br>
 
 <section id="intrestsList">
-<button onclick="openIntrestList()">Intresse message</button>
+<button id="adminIntrest" onclick="openIntrestList()">Intresse meddelande</button>
 </section>
 <br>
 
