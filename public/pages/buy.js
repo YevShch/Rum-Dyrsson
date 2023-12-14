@@ -32,6 +32,7 @@ function filterResidences() {
 }
 
 export async function getAllResidence() {
+  console.log("hej")
   $(document).ready(async function () {
     const bostad = await getAll("buy");
     console.log(bostad)
