@@ -1,10 +1,10 @@
-/* body {
+ body {
   background-image: url(https://live.staticflickr.com/3797/10798143964_5fc2e95a00_b.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-} */
+} 
 
 #login {
   text-align: center;
@@ -19,11 +19,18 @@
   height: 50vh;
   justify-content: center;
   margin-left: 70vh;
-  margin-top: 15vh;
+  margin-top: 6vh;
 }
 
 #loginForm {
   margin-top: 5vh;
+}
+
+#loginHead {
+  text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: purple;
+    margin-top: 15vh;
 }
 
 #logInBtn {
@@ -128,7 +135,7 @@ h3 {
   color: rgb(44, 44, 108);
 }
 
-/* nav {
+nav {
   width: 100vw;
   position: fixed;
   top: 0;
@@ -153,7 +160,7 @@ nav>a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   font-size: larger
-} */
+} 
 
 
 #mainText {

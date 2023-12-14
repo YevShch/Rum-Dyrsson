@@ -11,13 +11,13 @@ export default async function login() {
       <section id="login">
         <form id="loginForm">
 
-          <label for="username">Användarnamn</label>
-          <input type="text" id="username" required>
+          <label for="username">Användarnamn: </label>
+          <input type="text" id="username" required><br><br>
 
-            <label for="password">Lösenord</label>
-            <input type="password" id="password" required>
+            <label for="password">Lösenord: </label>
+            <input type="password" id="password" required><br><br>
 
-              <button id="logInBtn" type="submit" value="Logga in">Log in</button>
+              <button id="logInBtn" type="submit" value="LogIn">Logga in</button>
               </form>
           </section>
           `)
@@ -39,11 +39,11 @@ export function addLoginsEventlistner() {
 async function vailidLogin(username, password) {
   const user = await getOne("admin", 1)
   if (user.username == username && user.password == password) {
-    console.log("Rät inlogningen!")
+    console.log("Korrekt inmatning!")
     await update("admin", 1, "logIn", 1)
     window.location.href = "#admin";
   } else {
-    alert("det är fel på användarnamnet eller lösenordet")
+    alert("Felaktigt användarnamn eller lösenord!")
   }
 }
 

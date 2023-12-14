@@ -4,7 +4,7 @@
       "id": 1,
       "username": "abc",
       "password": 123,
-      "logIn": 1
+      "logIn": 0
     }
   ],
   "buy": [
