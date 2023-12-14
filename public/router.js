@@ -3,9 +3,9 @@ import buy from "./pages/buy.js"
 import realters from "./pages/realters.js"
 import login, { addLoginsEventlistner } from "./pages/login.js"
 import admin, { addLogoutEventlistner } from "./pages/admin.js"
-import buyList from "./pages/buyList.js"
-import sellList from "./pages/sellList.js"
-import intrestsList from "./pages/intrestList.js"
+import buyList, { getAllBuyData, buyButtonEventListeners } from "./pages/buyList.js"
+import sellList, { getAllSellData, sellButtonEventListeners } from "./pages/sellList.js"
+import intrestList, { getAllIntrestData, intrestButtonEventListeners } from "./pages/intrestList.js"
 
 async function router() {
   switch (location.hash) {
@@ -29,12 +29,18 @@ async function router() {
       break
     case "#buyList":
       $('main').html(await buyList())
+      getAllBuyData()
+      buyButtonEventListeners()
       break
     case "#sellList":
       $('main').html(await sellList())
+      getAllSellData()
+      sellButtonEventListeners()
       break
-    case "#intrestsList":
-      $('main').html(await intrestsList())
+    case "#intrestList":
+      $('main').html(await intrestList())
+      getAllIntrestData()
+      intrestButtonEventListeners()
       break
     default:
       $('main').html(`<h1 id="default">Välkommen till bostadsmäklarfirman Dhyr & Rumson</h1><h2>Hemsidan där du kan hitta ditt drömhus!<br><h2>

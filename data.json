@@ -7,16 +7,40 @@
       "logIn": 1
     }
   ],
-  "buy": [
-    {
-      "id": 1,
-      "text": "asd"
-    },
+  "buy": [],
+  "sell": [],
+  "intrest": [
     {
       "id": 2,
-      "text": "asd"
+      "address": "lalalalal",
+      "name": "lol",
+      "email": "akdiahida@",
+      "phone": 8182828282,
+      "message": "nsfbobfobqfobobfoibiqobfobobfobeofboewbfobewobfoewbo"
+    },
+    {
+      "id": 3,
+      "address": "lalalalal",
+      "name": "lol",
+      "email": "akdiahida@",
+      "phone": 8182828282,
+      "message": "nsfbobfobqfobobfoibiqobfobobfobeofboewbfobewobfoewbo"
+    },
+    {
+      "id": 4,
+      "address": "lalalalal",
+      "name": "lol",
+      "email": "akdiahida@",
+      "phone": 8182828282,
+      "message": "nsfbobfobqfobobfoibiqobfobobfobeofboewbfobewobfoewbo"
+    },
+    {
+      "id": 5,
+      "address": "lalalalal",
+      "name": "lol",
+      "email": "akdiahida@",
+      "phone": 8182828282,
+      "message": "nsfbobfobqfobobfoibiqobfobobfobeofboewbfobewobfoewbo"
     }
-  ],
-  "sell": [],
-  "intrest": []
+  ]
 }

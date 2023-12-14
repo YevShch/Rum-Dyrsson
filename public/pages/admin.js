@@ -12,12 +12,12 @@ export default function admin() {
 <br>
 
 <section id="#sellList">
-<button onclick="openSellMessage()">Sell message</button>
+<button onclick="openSellList()">Sell message</button>
 </section>
 <br>
 
 <section id="intrestsList">
-<button onclick="openIntrestsList()">Intresse message</button>
+<button onclick="openIntrestList()">Intresse message</button>
 </section>
 <br>
 
@@ -35,8 +35,8 @@ function openSellList () {
   window.location.href = "#sellList";
 };
 
-function openIntrestsList () {
-  window.location.href = "#intrestsList";
+function openIntrestList () {
+  window.location.href = "#intrestList";
 };
 </script>
   `
@@ -44,6 +44,7 @@ function openIntrestsList () {
 }
 
 export function addLogoutEventlistner() {
+  console.log("log out")
   $("#handleLogout").on("click", function () {
     console.log('knappen är tryckt')
     handleLogout()
