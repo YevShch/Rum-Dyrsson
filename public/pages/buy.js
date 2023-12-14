@@ -3,9 +3,10 @@ import { getAll } from "../server-request.js";
 export default function buy () {
   return $( `
    <div id="showResidence">
+   <section id="houseShow">
    <h1>Hitta ditt drömhus:</h1>
    
-
+  
   <div>
   <form id="bostad">
 
@@ -45,6 +46,7 @@ export default function buy () {
 <form id="getAllBuy">
 <button id="getAllBuy" type="submit">Visa alla bostäder till salu</button>
 </form>
+</section>
   `);
 }
 
@@ -63,7 +65,8 @@ async function getAllBuyData () {
   console.log( bostad )
   for ( let i = 0; i < bostad.length; i++ ) {
     const section = $( `
-      <form id="showBuyList">
+       <div id="houseSort">
+       <form id="showBuyList">
        <fieldset>
          <form id="showDetail">
         <h2>${ bostad[ i ].address }</h2><h2>${ bostad[ i ].city }</h2>
@@ -77,6 +80,7 @@ async function getAllBuyData () {
         </form>
         </fieldset>
       </form>
+      </div>
       <script>
       
       </script>
