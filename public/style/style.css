@@ -337,3 +337,11 @@ nav>a {
 #hideHouseSell {
   display: none;
 }
+
+.filterResidence {
+  margin-top: 10vh;
+}
+
+#filterBTN {
+  margin-top: 15vh;
+}
