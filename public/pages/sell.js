@@ -114,13 +114,13 @@ export default function sell() {
 
 <section>
 <label for="name">Förnamn: </label>
-<input type="text" name="name" id="name" pattern="[A-Za-z]+" required />
+<input type="text" name="name" id="name" pattern="[A-Za-zÅåÄäÖö]+" required />
 </section>
 <br>
 
 <section>
 <label for="lastName">Efternamn: </label>
-<input type="text" name="lastName" id="lastName" pattern="[A-Za-z]+" required />
+<input type="text" name="lastName" id="lastName" pattern="[A-Za-zÅåÄäÖö]+" required />
 </section>
 <br>
 

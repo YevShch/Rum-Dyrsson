@@ -21,6 +21,11 @@ export default function admin() {
 </section>
 <br>
 
+<section id="messageList">
+<button onclick="openMessageList()">Visa alla meddelande</button>
+</section>
+<br>
+
 <section >
 <button id="handleLogout">Logga ut</button>
 </section>
@@ -37,6 +42,9 @@ function openSellList () {
 
 function openIntrestList () {
   window.location.href = "#intrestList";
+
+  function openMessageList () {
+  window.location.href = "#messageList";
 };
 </script>
   `
