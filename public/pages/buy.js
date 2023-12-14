@@ -2,12 +2,9 @@ import { getAll, getOne, addOne } from "../server-request.js";
 import NewIntrest from "../class/newIntrest.js";
 
 let lastFilteredResidences = null;
-let lastSortOrder = 'priceAsc';
-let lastResidenceType = 'all';
 
 function renderResidenceDetails(residence) {
   return `
-    <button id="filterBTN" onclick="backToFilteredResidences()">Tillbaka till Filtrerade</button>
     <button id="filterBTN" onclick="backToAllResidences()">Tillbaka till Alla Bostäder</button>
     <h3>${residence.address}</h3>
     <p>Typ: ${residence.type}</p>
@@ -26,9 +23,9 @@ function renderResidenceDetails(residence) {
     <p>Bilder:${residence.photo}</p>
     <button onclick="toggleInterestForm(${residence.id})">Intresseanmälan</button>
     <div id="interestForm-${residence.id}" class="interest-form" style="display:none;">
-        <input type="text" id="nameInterest-${residence.id}" placeholder="Ditt namn">
-        <input type="tel" id="phoneInterest-${residence.id}" placeholder="Ditt telefonnummer" pattern="[0-9]+" title="Endast siffror är tillåtna">
-        <input type="email" id="emailInterest-${residence.id}" placeholder="Din e-postadress">
+        <input type="text" id="nameInterest-${residence.id}" placeholder="Ditt namn" >
+        <input type="tel" id="phoneInterest-${residence.id}" placeholder="Ditt telefonnummer" pattern="[0-9]+" title="Endast siffror är tillåtna" >
+        <input type="email" id="emailInterest-${residence.id}" placeholder="Din e-postadress" >
         <button onclick="submitInterest(${residence.id})">Skicka</button>
     </div>
   `;
@@ -91,52 +88,9 @@ async function getResidenceById(id) {
   return await getOne("buy", id)
 }
 
-window.backToFilteredResidences = async () => {
-  if (lastFilteredResidences) {
-    const residencesList = lastFilteredResidences.map(residence => `
-      <li class="residence-item" onclick="showResidenceDetails(${residence.id})">
-        <img src="${residence.photo}" alt="Preview of ${residence.address}" class="residence-preview-image">
-        <div class="residence-details">
-          <h3>${residence.address}</h3>
-                  </br>
-          <p>Pris: ${residence.price} kr</p>
-                  </br>
-          <p>Storlek: ${residence.area} kvm</p>
-        </div>
-      </li>
-    `).join('');
-
-    document.getElementById("app").innerHTML = `
-      <h2 class="searchTitle">Filtrerade Bostäder:</h2>
-      <div class="filterResidence">
-        <label for="sortOrder">Sortera efter:</label>
-        <select id="sortOrder" value="${lastSortOrder}">
-          <option value="priceAsc">Pris (Lägst överst)</option>
-          <option value="priceDesc">Pris (Högst överst)</option>
-          <option value="sizeAsc">Storlek (Minst överst)</option>
-          <option value="sizeDesc">Storlek (Störst överst)</option>
-        </select>
-
-        <label for="residenceType">Bostadstyp:</label>
-        <select id="residenceType" value="${lastResidenceType}">
-          <option value="all">Alla</option>
-          <option value="Villa">Villa</option>
-          <option value="Lägenhet">Lägenhet</option>
-          <option value="Radhus">Radhus</option>
-        </select>
-
-        <button onclick="filterResidences()">Filtrera</button>
-      </div>
-      <ul class="residencesList">${residencesList}</ul>
-    `;
-  } else {
-    backToAllResidences();
-  }
-};
 window.backToAllResidences = async () => {
   document.getElementById("app").innerHTML = await buy();
 };
-
 
 window.filterResidences = async function () {
   try {
