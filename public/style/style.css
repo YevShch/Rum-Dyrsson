@@ -1,10 +1,10 @@
- body {
+body {
   background-image: url(https://live.staticflickr.com/3797/10798143964_5fc2e95a00_b.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-} 
+}
 
 #login {
   text-align: center;
@@ -24,23 +24,23 @@
 
 #showResidence {
   text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: purple;
-    margin-top: 15vh;
-    width: 70vh;
-    margin-left: 65vh;
-    justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: purple;
+  margin-top: 15vh;
+  width: 70vh;
+  margin-left: 65vh;
+  justify-content: center;
 }
 
 
 #houseSort {
   background-color: rgba(219, 231, 255, 0.908);
   text-align: center;
-    margin-top: 15vh;
-    color: rgb(44, 44, 108);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 70vh;
-    justify-content: center;  
+  margin-top: 15vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 70vh;
+  justify-content: center;
 }
 
 
@@ -59,9 +59,9 @@
 
 #loginHead {
   text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: purple;
-    margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: purple;
+  margin-top: 15vh;
 }
 
 #logInBtn {
@@ -112,6 +112,28 @@
   background-color: rgb(169, 217, 247);
 }
 
+#sellList {
+  background-color: rgba(203, 252, 238, 0.873);
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#intrestList {
+  background-color: rgba(249, 249, 210, 0.873);
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
 #kopText {
   text-align: center;
   margin-top: 15vh;
@@ -119,17 +141,21 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* #bostad {
+#buyList {
   background-color: rgba(161, 214, 210, 0.873);
-  width: 90vh;
-  height: 90vh;
   text-align: center;
   justify-content: center;
-  margin-left: 55vh;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-} */
+  margin-top: 15vh;
+  color: rgb(44, 44, 108);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+
+#showBuyList {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 #maklare {
   text-align: center;
@@ -191,7 +217,7 @@ nav>a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   font-size: larger
-} 
+}
 
 
 #mainText {
@@ -201,7 +227,7 @@ nav>a {
   align-items: center;
   width: 95vh;
   margin-left: 50vh;
-  
+
 }
 
 
@@ -215,7 +241,6 @@ nav>a {
 
 
 .loginAdmin {
-
   position: absolute;
   top: 0;
   right: 0;
@@ -225,7 +250,58 @@ nav>a {
   margin-top: 1vh;
 }
 
+#admin {
+  margin-top: 15vh;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
 
+#adminBuy {
+  background-color: rgb(178, 247, 247);
+  height: 5vh;
+  width: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+#adminSell {
+  background-color: rgb(178, 247, 223);
+  height: 5vh;
+  width: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+#adminIntrest {
+  background-color: rgb(236, 247, 178);
+  height: 8vh;
+  width: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
+
+#adminLogIn {
+  background-color: rgba(239, 185, 225, 0.873);
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  margin-left: 70vh;
+  margin-top: 5vh;
+  width: 60vh;
+  padding-top: 8vh;
+  padding-bottom: 5vh;
+}
+
+#handleLogout {
+  background-color: rgb(247, 213, 178);
+  height: 5vh;
+  width: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+}
 
 .modal-container {
   position: fixed;
@@ -244,4 +320,20 @@ nav>a {
   background-color: #fff;
   padding: 20px;
   max-width: 80%;
+}
+
+#noShowBuy {
+  display: none;
+}
+
+#hideHouseBuy {
+  display: none;
+}
+
+#noShowSell {
+  display: none;
+}
+
+#hideHouseSell {
+  display: none;
 }
