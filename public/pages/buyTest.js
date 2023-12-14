@@ -1,4 +1,5 @@
 export default async function buy() {
+  
   return $(`
 <form>
   <section class="FiltreraBostad">

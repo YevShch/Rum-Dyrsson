@@ -21,8 +21,7 @@ function renderResidenceDetails(residence) {
     <p>email: ${residence.email}</p>
     <p>phone: ${residence.phone}</p>
     <p>Bilder:${residence.photo}</p>
-    <button onclick="toggleInterestForm(${residence.id})">Intresseanmälan</button>
-    <div id="interestForm-${residence.id}" class="interest-form" style="display:none;">
+    <div id="interestForm-${residence.id}" class="interest-form"">
         <input type="text" id="nameInterest-${residence.id}" placeholder="Ditt namn" >
         <input type="tel" id="phoneInterest-${residence.id}" placeholder="Ditt telefonnummer" pattern="[0-9]+" title="Endast siffror är tillåtna" >
         <input type="email" id="emailInterest-${residence.id}" placeholder="Din e-postadress" >
@@ -140,11 +139,12 @@ window.filterResidences = async function () {
   }
 }
 
+/*
 window.toggleInterestForm = function (residenceId) {
   const form = document.getElementById(`interestForm-${residenceId}`);
   form.style.display = form.style.display === 'none' ? 'block' : 'none';
 };
-
+*/
 function validatePhone(phone) {
   const re = /^[0-9]+$/;
   return re.test(phone);

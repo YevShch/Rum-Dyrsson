@@ -17,14 +17,14 @@ async function router() {
       $('main').html(await buy())
       break
     case "#realters":
-      $('main').html(realters())
+      $('main').html(await realters())
       break
     case "#login":
       $('main').html(await login())
       addLoginsEventlistner()
       break
     case "#admin":
-      $('main').html(admin())
+      $('main').html(await admin())
       addLogoutEventlistner()
       break
     case "#buyList":

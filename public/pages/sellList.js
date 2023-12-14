@@ -1,6 +1,9 @@
 import { getAll, getOne, addOne, deleteOne } from "../server-request.js";
 
 export default async function sellList() {
+  if (await checkLogIn()) {
+    window.location.href = "#login";
+  }
   return $(`
    <div id="sellList">
    <h1>Säljförfrågningar:</h1>
@@ -88,4 +91,16 @@ export async function remove(id) {
     console.error('Error in remove:', error);
   }
   window.location.reload()
+}
+
+async function checkLogIn() {
+  const user = await getOne("admin", 1)
+  console.log(user.logIn)
+  if (user.logIn === 0) {
+    console.log("true")
+    return true
+  } else {
+    console.log("false")
+    return false
+  }
 }
