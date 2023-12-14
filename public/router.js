@@ -1,5 +1,5 @@
 import sell, { addSellsEventlistner } from "./pages/sell.js"
-import buy, { getAllResidence }  from "./pages/buy.js"
+import buy, { getAllResidence, addBuyEventListeners } from "./pages/buy.js"
 import realters from "./pages/realters.js"
 import login, { addLoginsEventlistner } from "./pages/login.js"
 import admin, { addLogoutEventlistner } from "./pages/admin.js"
@@ -14,9 +14,9 @@ async function router() {
       addSellsEventlistner()
       break
     case "#buy":
-      $( 'main' ).html( await buy() )
+      $('main').html(await buy())
       getAllResidence()
-      // addBuyEventListeners()
+      addBuyEventListeners()
       break
     case "#realters":
       $('main').html(realters())
