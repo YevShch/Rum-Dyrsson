@@ -2,6 +2,7 @@
   "houses": [
     {
       "id": 1,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Topvägen 41",
       "price": 1000000,
@@ -21,6 +22,7 @@
     },
     {
       "id": 2,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Kunskapsvägen 50",
       "price": 750000,
@@ -40,6 +42,7 @@
     },
     {
       "id": 3,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Villa",
       "address": "Villaville kulla 2",
       "price": 1500000,
@@ -59,6 +62,7 @@
     },
     {
       "id": 4,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Mariegatan 75",
       "price": 900000,
@@ -78,6 +82,7 @@
     },
     {
       "id": 5,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Torevägen 58",
       "price": 1000000,
@@ -97,6 +102,7 @@
     },
     {
       "id": 6,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Villa",
       "address": "Kalasvägen 23",
       "price": 1100000,
@@ -116,6 +122,7 @@
     },
     {
       "id": 7,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Elvägen 1",
       "price": 1700000,
@@ -135,6 +142,7 @@
     },
     {
       "id": 8,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Technogatan 30",
       "price": 1000000,
@@ -154,6 +162,7 @@
     },
     {
       "id": 9,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Villa",
       "address": "Lockelookvägen 53",
       "price": 1400000,
@@ -173,6 +182,7 @@
     },
     {
       "id": 10,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Triptraptrullgatan 10",
       "price": 800000,
@@ -192,6 +202,7 @@
     },
     {
       "id": 11,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Skyrocketvägen 48",
       "price": 950000,
@@ -211,6 +222,7 @@
     },
     {
       "id": 12,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Villa",
       "address": "Booleangatan 55",
       "price": 1200000,
@@ -230,6 +242,7 @@
     },
     {
       "id": 13,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Bergodalbanevägen 40",
       "price": 1500000,
@@ -249,6 +262,7 @@
     },
     {
       "id": 14,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Muffingatan 21",
       "price": 650000,
@@ -268,6 +282,7 @@
     },
     {
       "id": 15,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Villa",
       "address": "Dragondalsgatan",
       "price": 1200000,
@@ -287,6 +302,7 @@
     },
     {
       "id": 16,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Krokodilvägen 39",
       "price": 900000,
@@ -306,6 +322,7 @@
     },
     {
       "id": 17,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Spacevägen",
       "price": 900000,
@@ -325,6 +342,7 @@
     },
     {
       "id": 18,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Villa",
       "address": "Programmeringsgatan 37",
       "price": 1500000,
@@ -344,6 +362,7 @@
     },
     {
       "id": 19,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Hus",
       "address": "Fridofröjdvägen 50",
       "price": 1300000,
@@ -363,6 +382,7 @@
     },
     {
       "id": 20,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
       "type": "Lägenhet",
       "address": "Grafikvägen 25",
       "price": 1000000,

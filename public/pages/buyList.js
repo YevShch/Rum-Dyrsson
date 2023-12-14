@@ -32,7 +32,7 @@ export async function getAllBuyData() {
          <p>Förråd: ${bostad[i].storehouse}</p>
          <p>Parkeringplats: ${bostad[i].parking}</p>
          <p>Innegård: ${bostad[i].garden}</p>
-         <p>Namn: ${bostad[i].name}</p>
+         <p>Namn: ${bostad[i].firstName}</p>
          <p>Efternamn: ${bostad[i].lastName}</p>
          <p>Mejladress: ${bostad[i].email}</p>
          <p>Telefonnummer: ${bostad[i].phone}</p>
