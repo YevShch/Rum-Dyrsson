@@ -135,7 +135,7 @@ nav {
   padding: 1vh 0;
   display: flex;
   justify-content: center;
-}
+} */
 
 
 header>.main-nav {
@@ -149,7 +149,7 @@ header>.main-nav {
 }
 
 nav>a {
-  color: rgb(28, 98, 228);
+  color: rgba(28, 98, 228, 0.171);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   font-size: larger
