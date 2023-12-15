@@ -4,22 +4,10 @@ export async function getAll(section) {
   return data
 }
 
-/*
-export async function addOne(section, newData) {
-  let response = await fetch(`/${section}`, {
-    method: 'post',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(newData)
-  })
-
-  response = await response.json()
-  console.log(response);
-}
-*/
 export async function addOne(section, newData) {
   try {
     const response = await fetch(`/${section}`, {
-      method: 'post',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newData)
     });
@@ -57,7 +45,7 @@ export async function update(section, id, propertyName, newValue) {
 
 export async function deleteOne(section, id) {
   let response = await fetch(`/${section}/${id}`, {
-    method: 'delete'
+    method: 'DELETE'
   })
 
   response = await response.json()

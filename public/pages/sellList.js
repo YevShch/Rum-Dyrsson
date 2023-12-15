@@ -72,11 +72,9 @@ export function sellButtonEventListeners() {
 // Async functions
 export async function publish(id) {
   try {
-    const data = await getOne("sell", id);
-    console.log(data);
-    await addOne("buy", data);
-    await deleteOne("sell", id);
-    console.log("Complete");
+    const data = await getOne("sell", id)
+    await addOne("buy", data)
+    await deleteOne("sell", id)
   } catch (error) {
     console.error('Error in publish:', error);
   }

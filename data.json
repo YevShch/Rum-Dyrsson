@@ -4,7 +4,7 @@
       "id": 1,
       "username": "abc",
       "password": 123,
-      "logIn": 0
+      "logIn": 1
     }
   ],
   "buy": [
@@ -287,9 +287,7 @@
       "lastName": "Årsdal",
       "email": "MajaArsdal@gmail.com",
       "phone": "0224435678"
-    }
-  ],
-  "sell": [
+    },
     {
       "id": 15,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
@@ -349,7 +347,9 @@
       "lastName": "Vals",
       "email": "IdaVals@gmail.com",
       "phone": "0797865443"
-    },
+    }
+  ],
+  "sell": [
     {
       "id": 18,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
