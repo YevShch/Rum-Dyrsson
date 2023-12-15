@@ -4,7 +4,7 @@
       "id": 1,
       "username": "abc",
       "password": 123,
-      "logIn": 1
+      "logIn": 0
     }
   ],
   "buy": [
@@ -411,22 +411,5 @@
       "phone": "0991123458"
     }
   ],
-  "intrest": [
-    {
-      "id": "id1702591325146",
-      "bostadID": 1,
-      "address": "Topvägen 41",
-      "name": "Joakim Chan",
-      "phone": "6739814889",
-      "email": "chan_kayin@hotmail.se"
-    },
-    {
-      "id": "id1702593572153",
-      "bostadID": 1,
-      "address": "Topvägen 41",
-      "name": "Joakim Chan",
-      "phone": "46739814889",
-      "email": "chan_kayin@hotmail.se"
-    }
-  ]
+  "intrest": []
 }
