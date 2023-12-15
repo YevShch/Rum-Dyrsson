@@ -1,19 +1,19 @@
 import { getAll } from "../server-request.js";
 
-export default async function buyList () {
+export default async function buy () {
   return $( `
    <div id="showResidence">
    <h2>Alla bostäder:</h2>
    
       <div class="filterResidence">
-        <label for="sortOrder">Sortera efter:</label>
-        <select id="sortOrder">
-          <option value="priceAsc">Pris (Lägst överst)</option>
-          <option value="priceDesc">Pris (Högst överst)</option>
+        <label for="sortBy">Sortera efter:</label>
+        <select id="sortBy">
+          <option value="minUp">Pris (Lägst överst)</option>
+          <option value="maxUp">Pris (Högst överst)</option>
         </select>
 
         <label for="residenceType">Bostadstyp:</label>
-        <select id="residenceType">
+        <select id="type">
           <option value="all">Alla</option>
           <option value="Villa">Villa</option>
           <option value="Radhus">Radhus</option>
@@ -22,19 +22,67 @@ export default async function buyList () {
         </select>
 
         <button onclick="filterResidences()">Filtrera</button>
+        <script>
+        function filterResidences () {
+  $( document ).ready( async function () {
+    const bostad = await getAll( "buy" );
+    console.log( bostad )
+    let sort = $( '#sortBy' ).val()
+    console.log( "sort price" )
+    if ( sort === "minUp" ) {
+      sortedArray = bostad.sort( ( a, b ) => a.price - b.price )
+      console.log();
+    } else if ( sort === "maxUp" ) {
+      sortedArray = bostad.sort( ( a, b ) => b.price - a.price )
+    }
+    console.log(sortedArray);
+  } );
+}
+        </script>
       </div>
   <div>
   `);
 }
 
-function filterResidences () {
-  
-}
+// function filterResidences () {
+//   $( document ).ready( async function () {
+//     const bostad = await getAll( "buy" );
+//     console.log( bostad )
+//     let sort = $( '#sortBy' ).val()
+//     console.log( "sort price" )
+//     if ( sort === "minUp" ) {
+//       sortedArray = bostad.sort( ( a, b ) => a.price - b.price )
+//       console.log();
+//     } else if ( sort === "maxUp" ) {
+//       sortedArray = bostad.sort( ( a, b ) => b.price - a.price )
+//     }
+//     console.log(sortedArray);
+//   } );
+// }
+
+// function updateBySort () {
+//   sortedArray = []
+//   let data = getAllBuyData()
+//   let sort = $( '#sortBy' ).val()
+//   console.log( "sort price" )
+//   sortedArray = data.sort( ( a, b ) => a.price - b.price )
+// } 
+
+// function filterBy ( data, type ) {
+//   for ( let i = 0; i < data.length; i++ ) {
+//     if ( data[ i ].type === type ) {
+//       sortedArray.push( data[ i ] )
+//     }
+//   }
+// }
+
+
 
 export async function getAllResidence () {
   $( document ).ready( async function () {
     const bostad = await getAll( "buy" );
     console.log( bostad )
+    
     for ( let i = 0; i < bostad.length; i++ ) {
       const section = $( `
        <div id="sort">
