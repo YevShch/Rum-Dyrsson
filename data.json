@@ -167,7 +167,9 @@
       "lastName": "Danielsson",
       "email": "YlvaDan@gmail.com",
       "phone": "0610293847"
-    },
+    }
+  ],
+  "sell": [
     {
       "id": 9,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
@@ -269,26 +271,6 @@
       "phone": "0123987551"
     },
     {
-      "id": 14,
-      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
-      "type": "lägenhet",
-      "address": "Muffingatan 21",
-      "price": 650000,
-      "rooms": 2,
-      "area": 55,
-      "balcony": "Uteplats",
-      "floor": 2,
-      "elevator": "Ingen hiss",
-      "year": 1888,
-      "storehouse": "Jordkälla",
-      "parking": "Ingen parkering",
-      "garden": "Ingen innergård",
-      "firstName": "Maja",
-      "lastName": "Årsdal",
-      "email": "MajaArsdal@gmail.com",
-      "phone": "0224435678"
-    },
-    {
       "id": 15,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
       "type": "villa",
@@ -347,9 +329,7 @@
       "lastName": "Vals",
       "email": "IdaVals@gmail.com",
       "phone": "0797865443"
-    }
-  ],
-  "sell": [
+    },
     {
       "id": 18,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
@@ -411,5 +391,14 @@
       "phone": "0991123458"
     }
   ],
-  "intrest": []
+  "intrest": [
+    {
+      "id": "id1702624438196",
+      "bostadID": 7,
+      "address": "Elvägen 1",
+      "name": "test",
+      "phone": "1233",
+      "email": "test@test.com"
+    }
+  ]
 }
