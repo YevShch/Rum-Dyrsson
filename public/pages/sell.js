@@ -19,7 +19,6 @@ export default function sell() {
 <option value="lägenhet">Lägenhet</option>
 <option value="villa">Villa</option>
 <option value="radhus">Radhus</option>
-<option value="tomt">Tomt</option>
 </select>
 </section>
 <br>

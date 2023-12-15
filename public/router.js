@@ -1,13 +1,11 @@
 import sell, { addSellsEventlistner } from "./pages/sell.js"
-import buy, { getAllResidence, addBuyEventListeners} from "./pages/buy.js"
+import buy from "./pages/buy.js"
 import realters from "./pages/realters.js"
 import login, { addLoginsEventlistner } from "./pages/login.js"
 import admin, { addLogoutEventlistner } from "./pages/admin.js"
 import buyList, { getAllBuyData, buyButtonEventListeners } from "./pages/buyList.js"
 import sellList, { getAllSellData, sellButtonEventListeners } from "./pages/sellList.js"
 import intrestList, { getAllIntrestData, intrestButtonEventListeners } from "./pages/intrestList.js"
-import contact, {addMessage} from "./pages/contact.js";
-import messageList, { getAllMessages } from "./pages/messageList.js"
 
 async function router() {
   switch (location.hash) {
@@ -16,29 +14,23 @@ async function router() {
       addSellsEventlistner()
       break
     case "#buy":
-      $( 'main' ).html( await buy() )
-      getAllResidence()
-      addBuyEventListeners() 
+      $('main').html(await buy())
       break
     case "#realters":
-      $( 'main' ).html( realters() )     
-      break
-    case "#contact":
-      $( 'main' ).html( contact() )
-      addMessage();
+      $('main').html(await realters())
       break
     case "#login":
       $('main').html(await login())
-      addLoginsEventlistner() 
+      addLoginsEventlistner()
       break
     case "#admin":
-      $('main').html(admin())
+      $('main').html(await admin())
       addLogoutEventlistner()
       break
     case "#buyList":
       $('main').html(await buyList())
       getAllBuyData()
-      buyButtonEventListeners() 
+      buyButtonEventListeners()
       break
     case "#sellList":
       $('main').html(await sellList())
@@ -49,10 +41,6 @@ async function router() {
       $('main').html(await intrestList())
       getAllIntrestData()
       intrestButtonEventListeners()
-      break
-    case "#messageList":
-      $( 'main' ).html( await messageList() )
-      getAllMessages();
       break
     default:
       $('main').html(`<section id="mainText"><h1 id="default">Välkommen till bostadsmäklarfirman Dhyr & Rumson</h1><h2>Hemsidan där du kan hitta ditt drömhus!<br><h2>

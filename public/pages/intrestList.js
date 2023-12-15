@@ -1,6 +1,10 @@
-import { getAll, deleteOne } from "../server-request.js"
+import { getAll, deleteOne, getOne } from "../server-request.js"
 
 export default async function intrestList() {
+  if (await checkLogIn()) {
+    window.location.href = "#login";
+  }
+
   return $(`
    <div id="intrestList">
    <h1>intresse medelande:</h1>
@@ -18,11 +22,11 @@ export async function getAllIntrestData() {
       <form id="showBuyList">
        
         <h2>${intrest[i].id}</h2>
-         <p>Gatuadress: ${intrest[i].address}</p> 
+         <P>BostadID: ${intrest[i].bostadID} 
+          <P>Address: ${intrest[i].address} 
          <p>Namn: ${intrest[i].name}</p>
          <p>Mejladress: ${intrest[i].email}</p>
          <p>Telefonnummer: ${intrest[i].phone}</p>
-        <p>Meddelande: ${intrest[i].message}</p>
 
         <button class="action-button" data-action="delete" value=${intrest[i].id}>Ta bort</button> 
    
@@ -56,4 +60,16 @@ export async function remove(id) {
     console.error('Error in remove:', error);
   }
   window.location.reload()
+}
+
+async function checkLogIn() {
+  const user = await getOne("admin", 1)
+  console.log(user.logIn)
+  if (user.logIn === 0) {
+    console.log("true")
+    return true
+  } else {
+    console.log("false")
+    return false
+  }
 }

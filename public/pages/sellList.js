@@ -1,6 +1,9 @@
 import { getAll, getOne, addOne, deleteOne } from "../server-request.js";
 
 export default async function sellList() {
+  if (await checkLogIn()) {
+    window.location.href = "#login";
+  }
   return $(`
    <div id="sellList">
    <h1>Säljförfrågningar:</h1>
@@ -32,7 +35,7 @@ export async function getAllSellData() {
          <p>Förråd: ${bostad[i].storehouse}</p>
          <p>Parkeringplats: ${bostad[i].parking}</p>
          <p>Innegård: ${bostad[i].garden}</p>
-         <p>Namn: ${bostad[i].name}</p>
+         <p>Namn: ${bostad[i].firstName}</p>
          <p>Efternamn: ${bostad[i].lastName}</p>
          <p>Mejladress: ${bostad[i].email}</p>
          <p>Telefonnummer: ${bostad[i].phone}</p>
@@ -69,11 +72,9 @@ export function sellButtonEventListeners() {
 // Async functions
 export async function publish(id) {
   try {
-    const data = await getOne("sell", id);
-    console.log(data);
-    await addOne("buy", data);
-    await deleteOne("sell", id);
-    console.log("Complete");
+    const data = await getOne("sell", id)
+    await addOne("buy", data)
+    await deleteOne("sell", id)
   } catch (error) {
     console.error('Error in publish:', error);
   }
@@ -88,4 +89,16 @@ export async function remove(id) {
     console.error('Error in remove:', error);
   }
   window.location.reload()
+}
+
+async function checkLogIn() {
+  const user = await getOne("admin", 1)
+  console.log(user.logIn)
+  if (user.logIn === 0) {
+    console.log("true")
+    return true
+  } else {
+    console.log("false")
+    return false
+  }
 }
