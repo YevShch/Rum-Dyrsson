@@ -4,7 +4,7 @@
       "id": 1,
       "username": "abc",
       "password": 123,
-      "logIn": 0
+      "logIn": 1
     }
   ],
   "buy": [
@@ -167,9 +167,7 @@
       "lastName": "Danielsson",
       "email": "YlvaDan@gmail.com",
       "phone": "0610293847"
-    }
-  ],
-  "sell": [
+    },
     {
       "id": 9,
       "photo": "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg",
@@ -209,7 +207,9 @@
       "lastName": "Björnsson",
       "email": "DianaBjorn@gmail.com",
       "phone": "0196574823"
-    },
+    }
+  ],
+  "sell": [
     {
       "id": 11,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU",
@@ -393,12 +393,12 @@
   ],
   "intrest": [
     {
-      "id": "id1702624438196",
-      "bostadID": 7,
-      "address": "Elvägen 1",
-      "name": "test",
-      "phone": "1233",
-      "email": "test@test.com"
+      "id": "id1702637039764",
+      "bostadID": 2,
+      "address": "Kunskapsvägen 50",
+      "name": "Kris Robinsson",
+      "phone": "0723456431",
+      "email": "kris.rob@gmail.com"
     }
   ]
 }
