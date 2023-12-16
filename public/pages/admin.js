@@ -1,46 +1,50 @@
-import { update } from "../server-request.js"
+import { update, getOne } from "../server-request.js"
 
-export default function admin() {
+export default async function admin() {
+  if (await checkLogIn()) {
+    window.location.href = "#login";
+  }
+
   return (`
-   <div id="admin">
-   <h1>Admin sida</h1>
-  <div>
-  
- <form id="#buyList">
-<button onclick="openBuyList()">Buy lista</button>
-</form>
-<br>
+    <div id="admin">
+    <h1>Admin sida</h1>
+    <div>
 
-<section id="#sellList">
-<button onclick="openSellList()">Sell message</button>
-</section>
-<br>
+    <div id="adminLogIn">
+    <form id="#buyList">
+    <button id="adminBuy" onclick="openBuyList()">Köp lista</button>
+    </form>
+    <br>
 
-<section id="intrestsList">
-<button onclick="openIntrestList()">Intresse message</button>
-</section>
-<br>
+    <section id="#sellList">
+    <button id="adminSell" onclick="openSellList()">Sälj lista</button>
+    </section>
+    <br>
 
-<section >
-<button id="handleLogout">Logga ut</button>
-</section>
-<br>
+    <section id="intrestsList">
+    <button id="adminIntrest" onclick="openIntrestList()">Intresse meddelande</button>
+    </section>
+    <br>
 
-<script>
-function openBuyList () {
-  window.location.href = "#buyList";
-};
+    <section >
+    <button id="handleLogout">Logga ut</button>
+    </section>
+    <br>
 
-function openSellList () {
-  window.location.href = "#sellList";
-};
+    <script>
+    function openBuyList () {
+      window.location.href = "#buyList";
+    };
 
-function openIntrestList () {
-  window.location.href = "#intrestList";
-};
-</script>
-  `
-  )
+    function openSellList () {
+      window.location.href = "#sellList";
+    };
+
+    function openIntrestList () {
+      window.location.href = "#intrestList";
+    };
+    </script>
+  `)
 }
 
 export function addLogoutEventlistner() {
@@ -56,4 +60,16 @@ export function addLogoutEventlistner() {
 export async function handleLogout() {
   console.log('update')
   await update("admin", 1, "logIn", 0)
+}
+
+async function checkLogIn() {
+  const user = await getOne("admin", 1)
+  console.log(user.logIn)
+  if (user.logIn === 0) {
+    console.log("true")
+    return true
+  } else {
+    console.log("false")
+    return false
+  }
 }

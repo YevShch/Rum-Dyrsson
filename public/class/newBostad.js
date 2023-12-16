@@ -22,12 +22,10 @@ export default class NewBostad {
     switch (type) {
       case 'lägenhet':
         return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGElIHM07zCr3loYfu1zODAsFI9y-hqb0DajmmtmgtpPDWcOFkdbTbkunPeUk2r01t6o&usqp=CAU"
-      case 'vila':
+      case 'villa':
         return "https://images.freeimages.com/clg/images/42/425484/illustration-of-house_f.jpg"
       case 'radhus':
         return "https://resources.mynewsdesk.com/image/upload/c_fill,dpr_auto,f_auto,g_auto,q_auto:good,w_746/zoehjutarkci1dzexwnz"
-      case 'tomt':
-        return "https://static.byggahus.se/attachments/images/large/585/585300-24277717e17a4f57a6a7c5860b0bb4ab.jpg"
     }
   }
 
