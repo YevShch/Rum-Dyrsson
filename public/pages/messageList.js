@@ -34,7 +34,7 @@ export function getAllMessages () {
 }
 
 async function getAllMessageData () {
-  const message = await getAll( "intrest" );
+  const message = await getAll( "message" );
   console.log( message )
   for ( let i = 0; i < message.length; i++ ) {
 
@@ -62,7 +62,7 @@ async function getAllMessageData () {
       </script>
     `);
     $( "#delete" ).click( function () {
-      deleteOne( "intrest", intrestID )
+      deleteOne( "message", messageID )
       console.log( data )
       console.log( "Knappen funkar!" );
 

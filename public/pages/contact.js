@@ -95,7 +95,7 @@ export function addMessage () {
 
     let contact = new NewMessage( name, lastName, email, phone, address, city, about, message )
     console.log( contact );
-    addOne( "intrest", contact.messageInfo() );
+    addOne( "message", contact.messageInfo() );
 
     alert( "Meddelande har skickats!" );
 

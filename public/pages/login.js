@@ -1,9 +1,9 @@
 import { getOne, update } from "../server-request.js"
 
-export default async function login() {
-  if (await checkLogIn()) {
-    console.log('här!')
-    return $(`
+export default async function login () {
+  if ( await checkLogIn() ) {
+    console.log( 'här!' )
+    return $( `
     <section id="loginHead">
       <h1>Logga in</h1>
     </section>
@@ -26,35 +26,35 @@ export default async function login() {
   }
 }
 
-export function addLoginsEventlistner() {
-  $("#loginForm").on("submit", function (event) {
+export function addLoginsEventlistner () {
+  $( "#loginForm" ).on( "submit", function ( event ) {
     event.preventDefault()
-    const username = $('#username').val();
-    const password = $('#password').val();
-    vailidLogin(username, password)
+    const username = $( '#username' ).val();
+    const password = $( '#password' ).val();
+    vailidLogin( username, password )
   }
   );
 }
 
-async function vailidLogin(username, password) {
-  const user = await getOne("admin", 1)
-  if (user.username == username && user.password == password) {
-    console.log("Korrekt inmatning!")
-    await update("admin", 1, "logIn", 1)
+async function vailidLogin ( username, password ) {
+  const user = await getOne( "admin", 1 )
+  if ( user.username == username && user.password == password ) {
+    console.log( "Korrekt inmatning!" )
+    await update( "admin", 1, "logIn", 1 )
     window.location.href = "#admin";
   } else {
-    alert("Felaktigt användarnamn eller lösenord!")
+    alert( "Felaktigt användarnamn eller lösenord!" )
   }
 }
 
-async function checkLogIn() {
-  const user = await getOne("admin", 1)
-  console.log(user.logIn)
-  if (user.logIn === 0) {
-    console.log(true)
+async function checkLogIn () {
+  const user = await getOne( "admin", 1 )
+  console.log( user.logIn )
+  if ( user.logIn === 0 ) {
+    console.log( true )
     return true
   } else {
-    console.log(false)
+    console.log( false )
     return false
   }
 }
