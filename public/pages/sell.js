@@ -1,9 +1,9 @@
 import { addOne } from "../server-request.js";
 import NewBostad from "../class/newBostad.js";
 
-export default function sell() {
-  return $(`
-  <section id="saljFormular">
+export default function sell () {
+  return $( `
+  <section id="sellPage">
 
   <section id="image"> 
    <section id="sellTitle">
@@ -11,7 +11,7 @@ export default function sell() {
    <h2>Vänligen fyll i formuläret:</h2>
    </section>
 
-   <form id="sell">
+   <form class="sell">
     <section>
 <label for="type">Typ av bostad:</label>
 <select name="residence" id="type" required>
@@ -125,7 +125,7 @@ export default function sell() {
 
 <section>
 <label for="email">Mejladress: </label>
- <input type="email" id="email" required />
+ <input type="email" id="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$]" required />
 </section>
 <br>
 
@@ -143,33 +143,33 @@ export default function sell() {
   `);
 }
 
-export function addSellsEventlistner() {
-  $("#sell").on("submit", function (event) {
+export function addSellsEventlistner () {
+  $( "#sell" ).on( "submit", function ( event ) {
     event.preventDefault()
-    let type = $('#type').val();
-    let address = $('#address').val();
-    let price = $('#price').val();
-    let rooms = $('#rooms').val();
-    let area = $('#area').val();
-    let balcony = $('#balcony').val();
-    let floor = $('#floor').val();
-    let elevator = $('#elevator').val();
-    let year = $('#year').val();
-    let storehouse = $('#storehouse').val();
-    let parking = $('#parking').val();
-    let garden = $('#garden').val();
-    let firstName = $('#name').val();
-    let lastName = $('#lastName').val();
-    let email = $('#email').val();
-    let phone = $('#phone').val();
+    let type = $( '#type' ).val();
+    let address = $( '#address' ).val();
+    let price = $( '#price' ).val();
+    let rooms = $( '#rooms' ).val();
+    let area = $( '#area' ).val();
+    let balcony = $( '#balcony' ).val();
+    let floor = $( '#floor' ).val();
+    let elevator = $( '#elevator' ).val();
+    let year = $( '#year' ).val();
+    let storehouse = $( '#storehouse' ).val();
+    let parking = $( '#parking' ).val();
+    let garden = $( '#garden' ).val();
+    let firstName = $( '#name' ).val();
+    let lastName = $( '#lastName' ).val();
+    let email = $( '#email' ).val();
+    let phone = $( '#phone' ).val();
 
-    let bostad = new NewBostad(type, address, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone)
-    console.log(bostad);
-    addOne("sell", bostad.dataInfo());
+    let bostad = new NewBostad( type, address, price, rooms, area, balcony, floor, elevator, year, storehouse, parking, garden, firstName, lastName, email, phone )
+    console.log( bostad );
+    addOne( "sell", bostad.dataInfo() );
 
-    alert("sell förfrågningen skapad!");
-    $("form")[0].reset()
-    console.log("Säljförfrågningen har sparats!");
+    alert( "sell förfrågningen skapad!" );
+    $( "form" )[ 0 ].reset()
+    console.log( "Säljförfrågningen har sparats!" );
   }
   );
 }

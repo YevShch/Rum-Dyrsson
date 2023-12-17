@@ -1,11 +1,11 @@
 import { update, getOne } from "../server-request.js"
 
-export default async function admin() {
-  if (await checkLogIn()) {
+export default async function admin () {
+  if ( await checkLogIn() ) {
     window.location.href = "#login";
   }
 
-  return (`
+  return ( `
     <div id="admin">
     <h1>Admin sida</h1>
     <div>
@@ -18,6 +18,11 @@ export default async function admin() {
 
     <section id="#sellList">
     <button id="adminSell" onclick="openSellList()">Sälj lista</button>
+    </section>
+    <br>
+
+    <section id="#messageList">
+    <button id="adminMessage" onclick="openMessageList()">Meddelande</button>
     </section>
     <br>
 
@@ -40,6 +45,11 @@ export default async function admin() {
       window.location.href = "#sellList";
     };
 
+    function openMessageList () {
+      window.location.href = "#messageList";
+    };
+
+
     function openIntrestList () {
       window.location.href = "#intrestList";
     };
@@ -47,29 +57,29 @@ export default async function admin() {
   `)
 }
 
-export function addLogoutEventlistner() {
-  console.log("log out")
-  $("#handleLogout").on("click", function () {
-    console.log('knappen är tryckt')
+export function addLogoutEventlistner () {
+  console.log( "log out" )
+  $( "#handleLogout" ).on( "click", function () {
+    console.log( 'knappen är tryckt' )
     handleLogout()
     window.location.href = "#login";
   }
   );
 }
 
-export async function handleLogout() {
-  console.log('update')
-  await update("admin", 1, "logIn", 0)
+export async function handleLogout () {
+  console.log( 'update' )
+  await update( "admin", 1, "logIn", 0 )
 }
 
-async function checkLogIn() {
-  const user = await getOne("admin", 1)
-  console.log(user.logIn)
-  if (user.logIn === 0) {
-    console.log("true")
+async function checkLogIn () {
+  const user = await getOne( "admin", 1 )
+  console.log( user.logIn )
+  if ( user.logIn === 0 ) {
+    console.log( "true" )
     return true
   } else {
-    console.log("false")
+    console.log( "false" )
     return false
   }
 }

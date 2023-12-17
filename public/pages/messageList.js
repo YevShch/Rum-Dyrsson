@@ -1,47 +1,30 @@
-import { getAll, deleteOne } from "../server-request.js";
+import { getAll, getOne, deleteOne } from "../server-request.js";
 
-export default function messageList () {
-  return `
-   <div id="messageList">
-   <h1>Meddelande</h1>
-  <div>
-  
-  <section id="#backBtn">
-<button onclick="goToAdminPage()">Tillbaka till admin sida</button>
-</section>
 
-<form id="getAllMessage">
-<button id="getAllMessage" type="submit">Visa alla meddelande</button>
-</form>
-
-<script>
-function goToAdminPage () {
-  console.log("Knappen fungerar!");
-  window.location.href = "#admin";
-};
-</script>
-  `
-}
-
-export function getAllMessages () {
-
-  $( "#getAllMessage" ).on( "submit", function ( event ) {
-    event.preventDefault()
-    console.log( "Knappen fungerar!" );
-    getAllMessageData()
+export default async function messageList () {
+  if ( await checkLogIn() ) {
+    window.location.href = "#login";
   }
-  );
+  return $( `
+  <div id="messageList">
+  <div>
+  `);
 }
 
-async function getAllMessageData () {
-  const message = await getAll( "intrest" );
-  console.log( message )
-  for ( let i = 0; i < message.length; i++ ) {
-
-    const section = $( `
-      <form id="showMessageList">
-       <fieldset> 
-        <h2>${ message[ i ].about }</h2>
+export async function getAllMessages () {
+  $( document ).ready( async function () {
+    const message = await getAll( "message" );
+    console.log( message )
+    const quantityMess = $( `
+    <h3>Du har ${  message.length } meddelande</h3>
+   `);
+    $( "#messageList" ).append( quantityMess  );
+    for ( let i = 0; i < message.length; i++ ) {
+      const section = $( `
+      <fieldset>
+     <form id="showMessageList">
+       <fieldset>
+        <p><b><u>${ message[ i ].about }</u></b></p>
         <p>${ message[ i ].id }</p>
         <p>Namn: ${ message[ i ].name }</p>
          <p>Efternamn: ${ message[ i ].lastName }</p>
@@ -50,25 +33,52 @@ async function getAllMessageData () {
          <p>Gatuadress: ${ message[ i ].address }</p> 
          <p>Ort: ${ message[ i ].city }</p>
          <p>Meddelande: ${ message[ i ].message }</p>
-        
-        <form id="delete">
-        <button type="submit" id="delete">Radera</button>
-        </form>
-
-         </fieldset>
+     
+        <button class="action-button" data-action="delete" value=${ message[ i ].id }>Ta bort</button> 
+   
       </form>
-      <script>
-      
-      </script>
+      </fieldset>
     `);
-    $( "#delete" ).click( function () {
-      deleteOne( "intrest", intrestID )
-      console.log( data )
-      console.log( "Knappen funkar!" );
-
-    } )
-
-    $( "#messageList" ).append( section );
-  }
+      $( "#messageList" ).append( section );
+    }
+  } )
 }
 
+
+export function messageButtonEventListeners () {
+  $( '#messageList' ).on( 'click', '.action-button', function () {
+    const id = $( this ).val();
+    const action = $( this ).data( 'action' );
+    console.log( `Button clicked with id: ${ id } and action: ${ action }` );
+
+    // Execute the async logic based on the button click
+    if ( action === 'delete' ) {
+      remove( id );
+    }
+    console.log( "end" )
+  } );
+}
+
+export async function remove ( id ) {
+  try {
+    await deleteOne( "message", id );
+    console.log( "Complete" );
+  } catch ( error ) {
+    console.error( 'Error in remove:', error );
+  }
+  window.location.reload()
+}
+
+async function checkLogIn () {
+  const user = await getOne( "admin", 1 )
+  console.log( user.logIn )
+  if ( user.logIn === 0 ) {
+    document.getElementById( "login-link" ).title = "Min sida";
+    // $( "#login-link" ).attr( "title", "Min sida" );
+    console.log( "true" )
+    return true
+  } else {
+    console.log( "false" )
+    return false
+  }
+}
