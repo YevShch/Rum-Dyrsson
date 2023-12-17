@@ -6,7 +6,14 @@ let lastFilteredResidences = null;
 function renderResidenceDetails ( residence ) {
   return `
     <button id="filterBTN" onclick="backToAllResidences()">Tillbaka till Alla Bostäder</button>
-    <h3>${ residence.address }</h3>
+     <section class="residenceContainer">
+     <fieldset>
+    <section class="residencePrewie">
+    <div id="residencePhoto>
+    <img src="${ residence.photo }" alt="beskrivning_av_bilden"style="width:200px;height:200px;cursor:pointer;">
+    </div>
+    <div id="residenceDescriptions">
+     <h3>${ residence.address }</h3>
     <p>Typ: ${ residence.type }</p>
     <p>Antal rum: ${ residence.rooms }</p>
     <p>Storlek: ${ residence.area } kvm</p>
@@ -16,17 +23,19 @@ function renderResidenceDetails ( residence ) {
     <p>Förråd: ${ residence.storehouse }</p>
     <p>Parkering: ${ residence.parking }</p>
     <p>Innergård: ${ residence.garden }</p>
-    <p>firstName: ${ residence.firstName }</p>
-    <p>lastName: ${ residence.lastName }</p>
-    <p>email: ${ residence.email }</p>
-    <p>phone: ${ residence.phone }</p>
-    <p>Bilder:${ residence.photo }</p>
+    </div>
+    </section>
     <div id="interestForm-${ residence.id }" class="interest-form"">
         <input type="text" id="nameInterest-${ residence.id }" placeholder="Ditt namn" >
+         </br>
         <input type="tel" id="phoneInterest-${ residence.id }" placeholder="Ditt telefonnummer" pattern="[0-9]+" title="Endast siffror är tillåtna" >
+         </br>
         <input type="email" id="emailInterest-${ residence.id }" placeholder="Din e-postadress" >
+         </br>
         <button onclick="submitInterest(${ residence.id })">Skicka</button>
     </div>
+    </fieldset>
+    </section>
   `;
 }
 
@@ -36,14 +45,20 @@ export default async function buy () {
     lastFilteredResidences = residencesData;
 
     const residencesList = residencesData.map( residence =>
-      `<li onclick="showResidenceDetails(${ residence.id })">
-        <img src="${ residence.photo }" alt="Preview of ${ residence.address }" class="residence-preview-image">
-        ${ residence.address }
+      `
+      <section onclick="showResidenceDetails(${ residence.id })"alt="beskrivning_av_section"style="background background-color: #fff;cursor:pointer;">
+      <fieldset>
+      <img src="${ residence.photo }" alt="beskrivning_av_bilden"style="width:200px;height:200px;cursor:pointer;">
+       <div id="titleResidencePhoto">
+      ${ residence.address }
+       </div>
         </br>
-        ${ residence.price } 
+        <p>${ residence.rooms } rum</p><p> ${ residence.area } kvm</p>
         </br>
-        ${ residence.area }
-      </li>`
+        <p> ${ residence.price }</p>
+        </section>
+       </fieldset>
+       `
     ).join( '' );
 
     return `

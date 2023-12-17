@@ -7,7 +7,7 @@ export default async function intrestList () {
 
   return $( `
    <div id="intrestList">
-   <h1>intresse medelande:</h1>
+  
   <div>
   `);
 }
@@ -16,12 +16,16 @@ export async function getAllIntrestData () {
   $( document ).ready( async function () {
     const intrest = await getAll( "intrest" );
     console.log( intrest )
+    const quantityIntrest = $( `
+    <h3>Du har ${ intrest.length } intresse anmälan</h3>
+   `);
+    $( "#intrestgeList" ).append( quantityIntrest );
     for ( let i = 0; i < intrest.length; i++ ) {
       const section = $( `
       <fieldset>
       <form id="showBuyList">
        
-        <h2>${ intrest[ i ].id }</h2>
+        <p><b><u>${ intrest[ i ].id }</p></b></u>
          <P>BostadID: ${ intrest[ i ].bostadID } 
           <P>Address: ${ intrest[ i ].address } 
          <p>Namn: ${ intrest[ i ].name }</p>

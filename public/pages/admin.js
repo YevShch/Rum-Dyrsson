@@ -21,6 +21,11 @@ export default async function admin () {
     </section>
     <br>
 
+    <section id="#messageList">
+    <button id="adminMessage" onclick="openMessageList()">Meddelande</button>
+    </section>
+    <br>
+
     <section id="intrestsList">
     <button id="adminIntrest" onclick="openIntrestList()">Intresse meddelande</button>
     </section>
@@ -39,6 +44,11 @@ export default async function admin () {
     function openSellList () {
       window.location.href = "#sellList";
     };
+
+    function openMessageList () {
+      window.location.href = "#messageList";
+    };
+
 
     function openIntrestList () {
       window.location.href = "#intrestList";

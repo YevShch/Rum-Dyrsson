@@ -3,7 +3,7 @@ import NewBostad from "../class/newBostad.js";
 
 export default function sell () {
   return $( `
-  <section id="saljFormular">
+  <section id="sellPage">
 
   <section id="image"> 
    <section id="sellTitle">
@@ -11,7 +11,7 @@ export default function sell () {
    <h2>Vänligen fyll i formuläret:</h2>
    </section>
 
-   <form id="sell">
+   <form class="sell">
     <section>
 <label for="type">Typ av bostad:</label>
 <select name="residence" id="type" required>
@@ -125,7 +125,7 @@ export default function sell () {
 
 <section>
 <label for="email">Mejladress: </label>
- <input type="email" id="email" required />
+ <input type="email" id="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$]" required />
 </section>
 <br>
 

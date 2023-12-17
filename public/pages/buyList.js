@@ -6,7 +6,6 @@ export default async function buyList () {
   }
   return $( `
    <div id="buyList">
-   <h1>Alla tillgängliga bostäder:</h1>
   <div>
   `);
 }
@@ -15,12 +14,16 @@ export async function getAllBuyData () {
   $( document ).ready( async function () {
     const bostad = await getAll( "buy" );
     console.log( bostad )
+    const quantityBuy = $( `
+    <h3>Du har ${ bostad.length } bostäder till salu</h3>
+   `);
+    $( "#buyList" ).append( quantityBuy );
     for ( let i = 0; i < bostad.length; i++ ) {
       const section = $( `
       <fieldset>
       <form id="showBuyList">
        
-        <h2>${ bostad[ i ].id }</h2>
+        <p><b><u>${ bostad[ i ].id }</p></b></u>
         <p>Foto: ${ bostad[ i ].photo }</p>
          <p>Typ av bostad: ${ bostad[ i ].type }</p>
          <p>Gatuadress: ${ bostad[ i ].address }</p> 

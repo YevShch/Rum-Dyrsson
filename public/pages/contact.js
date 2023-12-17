@@ -5,9 +5,8 @@ export default function contact () {
   return $( `
   <div id="contactPage">
 
-  <div id="image"> 
    <section id="contactTitle">
-   <h1>På Dhyr&Rumsson vet vi vad som krävs för att göra en riktigt bra bostadsaffär.</h1>
+   <h1>På Dhyr&Rumsson vet vi <br> vad som krävs för att göra<br> en riktigt bra bostadsaffär.</h1>
    <h2>Fyll i formuläret så kontaktar vi dig inom kort.</h2>
    </section>
 
@@ -71,8 +70,6 @@ export default function contact () {
 <button type="submit">Spara</button>
   </form>
     </div>
-
-  </div>
   `);
 }
 

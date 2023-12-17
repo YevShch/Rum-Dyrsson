@@ -40,8 +40,10 @@ async function vailidLogin ( username, password ) {
   const user = await getOne( "admin", 1 )
   if ( user.username == username && user.password == password ) {
     console.log( "Korrekt inmatning!" )
+    let logedIn = 
     await update( "admin", 1, "logIn", 1 )
     window.location.href = "#admin";
+
   } else {
     alert( "Felaktigt användarnamn eller lösenord!" )
   }
