@@ -1,6 +1,5 @@
-
 body {
-   background-image: url(https://live.staticflickr.com/3797/10798143964_5fc2e95a00_b.jpg); 
+  background-image: url(https://live.staticflickr.com/3797/10798143964_5fc2e95a00_b.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -23,6 +22,7 @@ body {
   margin-top: 6vh;
 }
 
+/*
 #showResidence {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -32,7 +32,7 @@ body {
   margin-left: 65vh;
   justify-content: center;
 }
-
+*/
 
 #houseSort {
   background-color: rgba(219, 231, 255, 0.908);
@@ -44,7 +44,6 @@ body {
   justify-content: center;
 }
 
-
 #houseShow {
   background-color: rgba(219, 231, 255, 0.908);
   width: 70vh;
@@ -52,11 +51,9 @@ body {
   text-align: center;
 }
 
-
 #loginForm {
   margin-top: 5vh;
 }
-
 
 #loginHead {
   text-align: center;
@@ -116,7 +113,7 @@ body {
 #contact {
   text-align: center;
   background-color: rgba(205, 238, 251, 0.874);
- padding: 3px;
+  padding: 3px;
   width: 60vh;
   height: auto;
   justify-content: center;
@@ -124,28 +121,29 @@ body {
   margin-top: 15vh;
   margin-bottom: 5vh;
   color: rgb(44, 44, 108);
-  font-family: Georgia, 'Times New Roman', Times, serif; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
-#contactTitle{
+#contactTitle {
   width: 80vh;
- height: 30vh;
-  padding-top: 10px; 
+  height: 30vh;
+  padding-top: 10px;
   margin-left: 50vh;
   margin-bottom: 5vh;
   text-align: center;
   background-color: rgba(205, 238, 251, 0.874);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(44, 44, 108);
-    margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  margin-top: 15vh;
 }
 
 
-.residenceContainer{
+.residenceContainer {
   background-color: whitesmoke;
 }
-#showResidenceDetails{
+
+#showResidenceDetails {
   background-color: #fff;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -167,19 +165,30 @@ body {
 #interestForm {
   flex: 1;
 }
+
 .searchTitle {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  width: 70vh;
+  margin-left: 65vh;
 }
 
 .filterResidence {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 20px;
+  background-color: rgba(203, 252, 238, 0.873);
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  width: 88vh;
+  margin-left: 60vh;
 }
 
 .filterResidence>label {
@@ -220,16 +229,18 @@ body {
   border: none;
   cursor: pointer;
 }
-.interest-form>button{
+
+.interest-form>button {
   font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: rgb(122, 122, 153);
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(122, 122, 153);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
+
 #sellList {
   background-color: rgba(203, 252, 238, 0.873);
   text-align: center;
@@ -330,10 +341,9 @@ nav {
   justify-content: center;
 }
 
-
 header>.main-nav {
   background-color: rgba(190, 223, 162, 0.848);
-  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea015264-1416-4cb6-9092-7b722f6d6953/df8o06q-650f3a9a-96f2-4cdb-ae37-85bb81ad3c49.png/v1/fill/w_1280,h_960,q_80,strp/colorful_gradient_texture_or_bkg_v2_by_thestockwarehouse_df8o06q-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvZWEwMTUyNjQtMTQxNi00Y2I2LTkwOTItN2I3MjJmNmQ2OTUzXC9kZjhvMDZxLTY1MGYzYTlhLTk2ZjItNGNkYi1hZTM3LTg1YmI4MWFkM2M0OS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xDjigDbZaoVSzSWKRnQn5TeS1CBk_59JY8AcJ725XfQ); 
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea015264-1416-4cb6-9092-7b722f6d6953/df8o06q-650f3a9a-96f2-4cdb-ae37-85bb81ad3c49.png/v1/fill/w_1280,h_960,q_80,strp/colorful_gradient_texture_or_bkg_v2_by_thestockwarehouse_df8o06q-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvZWEwMTUyNjQtMTQxNi00Y2I2LTkwOTItN2I3MjJmNmQ2OTUzXC9kZjhvMDZxLTY1MGYzYTlhLTk2ZjItNGNkYi1hZTM3LTg1YmI4MWFkM2M0OS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xDjigDbZaoVSzSWKRnQn5TeS1CBk_59JY8AcJ725XfQ);
   background-size: cover;
   display: flex;
   justify-content: space-around;
@@ -348,7 +358,6 @@ nav>a {
   font-size: larger
 }
 
-
 #mainText {
   background-color: rgba(240, 248, 255, 0.812);
   margin-top: 20vh;
@@ -359,15 +368,12 @@ nav>a {
 
 }
 
-
 #default {
   text-align: center;
   margin-top: 15vh;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgb(44, 44, 108);
 }
-
-
 
 .loginAdmin {
   position: absolute;
@@ -473,4 +479,28 @@ nav>a {
 
 #filterBTN {
   margin-top: 15vh;
-} 
+}
+
+#showResDet {
+  background-color: rgba(203, 252, 238, 0.873);
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  margin-left: 38vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  width: 110 vh;
+}
+
+#backToRes {
+  background-color: rgba(203, 252, 238, 0.873);
+  text-align: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(44, 44, 108);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
