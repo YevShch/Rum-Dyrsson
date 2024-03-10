@@ -22,6 +22,10 @@ body {
   margin-top: 6vh;
 }
 
+.showResidenceDetails{
+  background-color: white;
+}
+
 /*
 #showResidence {
   text-align: center;
